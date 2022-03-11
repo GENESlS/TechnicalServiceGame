@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 65ac96611c13a3449be43ed829f558f8
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -3956448048462536863
+    second: Rig|Rig|Rig|man_fall|Rig|man_fall
+  - first:
+      74: -6331363510815378869
+    second: Rig|Rig|Rig|man_idle|Rig|man_idle
+  - first:
+      74: 1267826936834977218
+    second: Rig|Rig|Rig|man_jump_in_place|Rig|man_jump_in_place
+  - first:
+      74: -8673341333104183364
+    second: Rig|Rig|Rig|man_run_in_place|Rig|man_run_in_place
+  - first:
+      74: 1328909559725086002
+    second: Rig|Rig|Rig|man_run_root|Rig|man_run_root
+  - first:
+      74: -4879400196324603917
+    second: Rig|Rig|Rig|man_sit_idle|Rig|man_sit_idle
+  - first:
+      74: 9171627914636075086
+    second: Rig|Rig|Rig|man_sit_stand_up|Rig|man_sit_stand_up
+  - first:
+      74: -7875294067798833087
+    second: Rig|Rig|Rig|man_sit_start|Rig|man_sit_start
+  - first:
+      74: 893775443916218255
+    second: Rig|Rig|Rig|man_sitting|Rig|man_sitting
+  - first:
+      74: 8875445575895647531
+    second: Rig|Rig|Rig|man_stride_left_root|Rig|man_stride_left_root
+  - first:
+      74: 4078133453918495049
+    second: Rig|Rig|Rig|man_stride_right_root|Rig|man_stride_right_root
+  - first:
+      74: 5229079139894603149
+    second: Rig|Rig|Rig|man_walk_in_place|Rig|man_walk_in_place
+  - first:
+      74: -1244091017668651249
+    second: Rig|Rig|Rig|man_walk_left_root|Rig|man_walk_left_root
+  - first:
+      74: 2848940017896714702
+    second: Rig|Rig|Rig|man_walk_right_root|Rig|man_walk_right_root
+  - first:
+      74: -1416081792457016620
+    second: Rig|Rig|Rig|man_walk_root_motion|Rig|man_walk_root_motion
+  - first:
+      74: -4188476505250317754
+    second: Rig|Rig|Rig|t_pose|Rig|t_pose
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

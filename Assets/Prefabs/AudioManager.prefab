@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4836366348466845310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4836366348466845308}
+  - component: {fileID: 4836366348466845309}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Audio
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4836366348466845308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836366348466845310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4836366348466845309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836366348466845310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7c9d75f0897764489b6b9960e711a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Menu
+    group: {fileID: 24300002, guid: c006fb8a396c96e4ca81b0cb994b8247, type: 2}
+    clip: {fileID: 8300000, guid: cd9a1056a3d569a43815b137622abfca, type: 3}
+    volume: 0.802
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Theme
+    group: {fileID: 24300002, guid: c006fb8a396c96e4ca81b0cb994b8247, type: 2}
+    clip: {fileID: 8300000, guid: 2565f0bd3db5c014686b4d91710904a3, type: 3}
+    volume: 0.802
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Intro
+    group: {fileID: 24300002, guid: c006fb8a396c96e4ca81b0cb994b8247, type: 2}
+    clip: {fileID: 8300000, guid: f5d12770dfe2f2b46ba855fa18ae401d, type: 3}
+    volume: 0.802
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Click
+    group: {fileID: 24300002, guid: c006fb8a396c96e4ca81b0cb994b8247, type: 2}
+    clip: {fileID: 8300000, guid: 5b287928aeb395c409101f5a08be6e07, type: 3}
+    volume: 0.802
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Success
+    group: {fileID: 24300002, guid: c006fb8a396c96e4ca81b0cb994b8247, type: 2}
+    clip: {fileID: 8300000, guid: 4af82d9c405ef0349933e2e495aae087, type: 3}
+    volume: 0.802
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Fail
+    group: {fileID: 24300002, guid: c006fb8a396c96e4ca81b0cb994b8247, type: 2}
+    clip: {fileID: 8300000, guid: ec03b6cc74cc6ef40a101095a0d9763f, type: 3}
+    volume: 0.802
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
