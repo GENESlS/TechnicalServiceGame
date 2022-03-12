@@ -62703,7 +62703,7 @@ Animator:
   m_GameObject: {fileID: 1848137594}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0a4634593d313774e8d159b39908b979, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3dbc7ff2cbc0b2641861dfe981557947, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -73304,7 +73304,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 8f8c48bd9ff187c4e9b83befed2ce84b, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 18ad0a498606f2345a8b706f73c08e1d, type: 2}
+      objectReference: {fileID: 9100000, guid: 8a7b8e7feda849d418305be11753e60f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f8c48bd9ff187c4e9b83befed2ce84b, type: 3}
 --- !u!4 &2142890017 stripped
