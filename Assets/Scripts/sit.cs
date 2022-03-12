@@ -1,15 +1,26 @@
+using System.Collections;
 using UnityEngine;
 
 public class sit : MonoBehaviour
 {
-    float timeLeft = 1.5f;
-    void Update()
+    public GameObject c, e;
+    Vector3 temp;
+    void Start()
     {
-        timeLeft -= Time.deltaTime;
-        if (timeLeft<0)
-        {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().speed = 0;
-            this.enabled = false;
-        }
+        temp = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, c.transform.localPosition.z);
+        c.transform.localPosition = new Vector3(0, 2, 2);
+        c.transform.Rotate(0, 171, 0);
+        StartCoroutine(Startup());
+        this.enabled = false;
+    }
+
+    IEnumerator Startup()
+    {
+        int z = 1;
+        yield return new WaitForSecondsRealtime(2);
+        c.transform.localPosition = temp;
+        c.transform.Rotate(0, -171, 0);
+        c.SetActive(false);
+        e.SetActive(true);
     }
 }
