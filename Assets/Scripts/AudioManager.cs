@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
         {
             StartCoroutine(Example());
             flag1 = 1;
-        } else if (scene.name == "Game" && flag2 == 0)
+        } else if (scene.name == "Episode 1" && flag2 == 0)
         {
             StopPlaying("Intro");
             Play("Theme");
