@@ -50,9 +50,8 @@ public class AudioManager : MonoBehaviour
         {
             StartCoroutine(Example());
             flag1 = 1;
-        } else if (scene.name == "Episode 1" && flag2 == 0)
+        } else if (scene.name.Contains("Episode") && flag2 == 0)
         {
-            StopPlaying("Intro");
             Play("Theme");
             flag2 = 1;
         }
@@ -89,6 +88,22 @@ public class AudioManager : MonoBehaviour
         StopPlaying("Menu");
         yield return new WaitForSecondsRealtime(1);
         Play("Intro");
+    }
+
+    public void Reset()
+    {
+        Destroy(gameObject);
+        Instantiate(this);
+    }
+
+    public void ChangeLevel()
+    {
+        flag2 = 0;
+    }
+
+    public void ReMenu()
+    {
+        flag = 0; flag1 = 0; flag2 = 0;
     }
 
 }
