@@ -9,8 +9,8 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     String sceneName;
     //int flag = 0, flag1 = 0, flag2 = 0;
-    public int sceneChange = 0;
-    public static AudioManager instance;
+    public /*static*/ int sceneChange = 0;
+    public /*static*/ AudioManager instance;
 
     void Awake()
     {
@@ -45,21 +45,18 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
         //sceneName = SceneManager.GetActiveScene();
-
+        
         if (sceneChange == 0)
         {
             switch (sceneName)
             {
-                case "Menu":
+                case string scenery when scenery.Equals("Menu"):
                     Play("Menu");
                     break;
-                case "Opening":
+                case string scenery when scenery.Contains("Opening"):
                     StartCoroutine(Example());
                     break;
-                case "Episode 1":
-                    Play("Theme");
-                    break;
-                case "Episode 2":
+                case string scenery when scenery.Contains("Episode"):
                     Play("Theme");
                     break;
             }
