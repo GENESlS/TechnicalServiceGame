@@ -35,8 +35,8 @@ public class Timer : MonoBehaviour
         {
             failScreen.SetActive(true);
             aa.Play("Fail");
-            this.enabled = false;
             if (disableBckgrSound) aa.StopPlaying("Theme");
+            this.enabled = false;
         }
     }
 }
