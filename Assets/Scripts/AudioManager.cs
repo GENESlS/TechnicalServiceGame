@@ -7,24 +7,24 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    String sceneName;
+    //int flag = 0, flag1 = 0, flag2 = 0;
+    public /*static*/ int sceneChange = 0;
+    public /*static*/ AudioManager instance;
 
-    int flag = 0, flag1 = 0, flag2 = 0;
-
-    public static AudioManager instance;
-    
     void Awake()
     {
-
-        if (instance == null)
+        sceneName = SceneManager.GetActiveScene().name;
+        /*if (instance == null)
         {
             instance = this;
         } else
         {
             Destroy(gameObject);
             return;
-        }
+        } 
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); */
 
         foreach (Sound s in sounds)
         {
@@ -36,11 +36,35 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
             s.source.outputAudioMixerGroup = s.group;
         }
+
+        //scene = SceneManager.GetActiveScene();
+
+        //sceneChange = 0;
     }
     
     private void Update()
     {
-        //Sound s = Array.Find(sounds, sound => sound.name == name);
+        //sceneName = SceneManager.GetActiveScene();
+        
+        if (sceneChange == 0)
+        {
+            switch (sceneName)
+            {
+                case string scenery when scenery.Equals("Menu"):
+                    Play("Menu");
+                    break;
+                case string scenery when scenery.Contains("Opening"):
+                    StartCoroutine(Example());
+                    break;
+                case string scenery when scenery.Contains("Episode"):
+                    Play("Theme");
+                    break;
+            }
+            sceneChange = 1;
+        }
+        
+
+        /*
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Menu" && flag == 0)
         {
@@ -50,12 +74,11 @@ public class AudioManager : MonoBehaviour
         {
             StartCoroutine(Example());
             flag1 = 1;
-        } else if (scene.name == "Game" && flag2 == 0)
+        } else if (scene.name.Contains("Episode") && flag2 == 0)
         {
-            StopPlaying("Intro");
             Play("Theme");
             flag2 = 1;
-        }
+        } */
     } 
 
     public void Play(String name)
@@ -91,4 +114,27 @@ public class AudioManager : MonoBehaviour
         Play("Intro");
     }
 
+    /* public void Reset()
+    {
+        Destroy(gameObject);
+        Instantiate(this);
+    }  */
+
+    public void ISceneChange()
+    {
+        if (sceneChange == 0) sceneChange = 1;
+        else sceneChange = 0;
+    }
+
+    /*
+    public void ChangeLevel()
+    {
+        flag2 = 0;
+    }
+
+    public void ReMenu()
+    {
+        flag = 0; flag1 = 0; flag2 = 0;
+    }
+    */
 }

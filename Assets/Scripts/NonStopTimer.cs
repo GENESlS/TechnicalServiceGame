@@ -1,9 +1,10 @@
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
+public class NonStopTimer : MonoBehaviour
 {
     float t;
+    public GameObject indText;
     public bool disableBckgrSound;
     public float timeLeft = 40;
     public GameObject failScreen;
@@ -16,9 +17,9 @@ public class Timer : MonoBehaviour
         t = timeLeft;
         xz = GameObject.Find("AudioManager");
         aa = xz.GetComponent<AudioManager>();
-       // aa = GameObject.Find(AudioManager.Instantiate)
+        // aa = GameObject.Find(AudioManager.Instantiate)
     }
-    private void OnEnable()
+    /* private void OnEnable()
     {
         timeLeft = t;
     }
@@ -26,17 +27,17 @@ public class Timer : MonoBehaviour
     private void OnDisable()
     {
         t = timeLeft;
-    }
+    } */
     void Update()
     {
-        this.GetComponent<TMP_Text>().text = ((int)timeLeft).ToString();
+        indText.GetComponent<TMP_Text>().text = ((int)timeLeft).ToString();
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
             failScreen.SetActive(true);
             aa.Play("Fail");
-            if (disableBckgrSound) aa.StopPlaying("Theme");
             this.enabled = false;
+            if (disableBckgrSound) aa.StopPlaying("Theme");
         }
     }
 }
