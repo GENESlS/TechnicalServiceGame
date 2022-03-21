@@ -7,24 +7,24 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-
-    int flag = 0, flag1 = 0, flag2 = 0;
-
+    String sceneName;
+    //int flag = 0, flag1 = 0, flag2 = 0;
+    public int sceneChange = 0;
     public static AudioManager instance;
-    
+
     void Awake()
     {
-
-        if (instance == null)
+        sceneName = SceneManager.GetActiveScene().name;
+        /*if (instance == null)
         {
             instance = this;
         } else
         {
             Destroy(gameObject);
             return;
-        }
+        } 
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); */
 
         foreach (Sound s in sounds)
         {
@@ -36,11 +36,38 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
             s.source.outputAudioMixerGroup = s.group;
         }
+
+        //scene = SceneManager.GetActiveScene();
+
+        //sceneChange = 0;
     }
     
     private void Update()
     {
-        //Sound s = Array.Find(sounds, sound => sound.name == name);
+        //sceneName = SceneManager.GetActiveScene();
+
+        if (sceneChange == 0)
+        {
+            switch (sceneName)
+            {
+                case "Menu":
+                    Play("Menu");
+                    break;
+                case "Opening":
+                    StartCoroutine(Example());
+                    break;
+                case "Episode 1":
+                    Play("Theme");
+                    break;
+                case "Episode 2":
+                    Play("Theme");
+                    break;
+            }
+            sceneChange = 1;
+        }
+        
+
+        /*
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Menu" && flag == 0)
         {
@@ -54,7 +81,7 @@ public class AudioManager : MonoBehaviour
         {
             Play("Theme");
             flag2 = 1;
-        }
+        } */
     } 
 
     public void Play(String name)
@@ -90,12 +117,19 @@ public class AudioManager : MonoBehaviour
         Play("Intro");
     }
 
-    public void Reset()
+    /* public void Reset()
     {
         Destroy(gameObject);
         Instantiate(this);
+    }  */
+
+    public void ISceneChange()
+    {
+        if (sceneChange == 0) sceneChange = 1;
+        else sceneChange = 0;
     }
 
+    /*
     public void ChangeLevel()
     {
         flag2 = 0;
@@ -105,5 +139,5 @@ public class AudioManager : MonoBehaviour
     {
         flag = 0; flag1 = 0; flag2 = 0;
     }
-
+    */
 }
