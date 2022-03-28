@@ -15600,8 +15600,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 295.84586, y: 165.52513}
-  m_SizeDelta: {x: 225.4437, y: 33.8787}
+  m_AnchoredPosition: {x: 295.7994, y: 165.17}
+  m_SizeDelta: {x: 225.4437, y: 33.053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313843520
 MonoBehaviour:
@@ -18868,6 +18868,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1199636466}
+        m_TargetAssemblyTypeName: CheckEp2, Assembly-CSharp
+        m_MethodName: Checker
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -27021,7 +27033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Google maps script beti\u011Fi : https://maps.googleapis.com/maps/api/js\n\n\ndocument.getElementById()
+  m_text: "Google maps script beti\u011Fi : https://maps.googleapis.com/maps/api/js\n\ndocument.getElementById()
     metodu sayfadaki elementlerin referanslar\u0131n\u0131 \xE7a\u011F\u0131rmay\u0131
     sa\u011Flar.\n\nJavaScript d\xF6k\xFCman\u0131 i\xE7inde map variable'\u0131n\u0131n
     tan\u0131mlan\u0131p getid ile html div elementi map-canvas'a atanmas\u0131 gerekiyor,
@@ -34931,7 +34943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &851874835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42406,7 +42418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 16195d087fd618145bd2313497654170, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8b30ea3a77e31a4087a79878b0dc438, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -45419,6 +45431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069411209}
   - component: {fileID: 1069411208}
+  - component: {fileID: 1069411210}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45440,7 +45453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indText: {fileID: 1342259940}
   disableBckgrSound: 1
-  timeLeft: 300
+  timeLeft: 150
   failScreen: {fileID: 1099858803}
 --- !u!4 &1069411209
 Transform:
@@ -45456,6 +45469,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1069411210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069411207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1abc92a55c1d1604daac16015485bac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: {fileID: 1151453995}
+  b: {fileID: 1575881169}
+  c: {fileID: 415733802}
+  d: {fileID: 1504625240}
+  e: {fileID: 964070243}
+  f: {fileID: 2057048928}
+  g: {fileID: 465604478}
 --- !u!1001 &1073797855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49943,6 +49975,7 @@ GameObject:
   - component: {fileID: 1199636463}
   - component: {fileID: 1199636465}
   - component: {fileID: 1199636464}
+  - component: {fileID: 1199636466}
   m_Layer: 5
   m_Name: htmlcon
   m_TagString: Untagged
@@ -50009,6 +50042,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199636462}
   m_CullTransparentMesh: 1
+--- !u!114 &1199636466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199636462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3897b2828d49b874bbe94e82fb8b6894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: {fileID: 1069411207}
+  b: {fileID: 993053000}
+  c: {fileID: 21300000, guid: 16195d087fd618145bd2313497654170, type: 3}
 --- !u!1001 &1201644483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59519,14 +59567,13 @@ GameObject:
   - component: {fileID: 1467491431}
   - component: {fileID: 1467491430}
   - component: {fileID: 1467491429}
-  - component: {fileID: 1467491432}
   m_Layer: 5
   m_Name: CheckButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1467491428
 RectTransform:
   m_ObjectHideFlags: 0
@@ -59629,25 +59676,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467491427}
   m_CullTransparentMesh: 1
---- !u!114 &1467491432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467491427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1abc92a55c1d1604daac16015485bac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  a: {fileID: 0}
-  b: {fileID: 0}
-  c: {fileID: 0}
-  d: {fileID: 0}
-  e: {fileID: 0}
-  f: {fileID: 0}
-  g: {fileID: 0}
 --- !u!1 &1469127476
 GameObject:
   m_ObjectHideFlags: 0
