@@ -27427,7 +27427,6 @@ GameObject:
   - component: {fileID: 599179339}
   - component: {fileID: 599179342}
   - component: {fileID: 599179341}
-  - component: {fileID: 599179340}
   m_Layer: 5
   m_Name: Snek
   m_TagString: Untagged
@@ -27451,21 +27450,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.5, y: 46.6}
-  m_SizeDelta: {x: 10.2531, y: 6.8639}
+  m_AnchoredPosition: {x: 17.3426, y: 46.6}
+  m_SizeDelta: {x: 5.9384, y: 6.8639}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &599179340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599179338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe208e40c3ba1f345a6e68cc00ad0eb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &599179341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46549,6 +46536,7 @@ GameObject:
   - component: {fileID: 1092749159}
   - component: {fileID: 1092749161}
   - component: {fileID: 1092749160}
+  - component: {fileID: 1092749162}
   m_Layer: 5
   m_Name: GameWin
   m_TagString: Untagged
@@ -46614,6 +46602,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092749158}
   m_CullTransparentMesh: 1
+--- !u!114 &1092749162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092749158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe208e40c3ba1f345a6e68cc00ad0eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: {fileID: 0}
+  speed: 2
 --- !u!1 &1094355437
 GameObject:
   m_ObjectHideFlags: 0
