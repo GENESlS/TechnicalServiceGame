@@ -4,13 +4,13 @@ using UnityEngine;
 public class SnekMovement : MonoBehaviour
 {
     private Vector2 _direction = Vector2.right;
-    private List<Transform> _segments;
+    private List<Transform> _segments= new List<Transform>();
     public Transform segmentPrefab;
+    //public int initialSize = 4;
 
-    private void Start()
+    private void OnEnable()
     {
-        _segments = new List<Transform>();
-        _segments.Add(this.transform);
+        ResetState();
     }
 
     private void Update()
@@ -46,14 +46,31 @@ public class SnekMovement : MonoBehaviour
         Transform segment = Instantiate(this.segmentPrefab);
         segment.transform.SetParent(this.transform.parent,false);
         segment.position = _segments[_segments.Count - 1].position;
-
+        //segment.localPosition = _segments[_segments.Count - 1].localPosition;
         _segments.Add(segment);
     }
 
+    private void ResetState()
+    {
+        for (int i = 1; i < _segments.Count; i++) {
+            Destroy(_segments[i].gameObject);
+        }
+
+        _segments.Clear();
+        _segments.Add(this.transform);
+
+      /*  for (int i = 1; i < this.initialSize; i++) {
+            _segments.Add(Instantiate(this.segmentPrefab));
+        } */
+
+        this.transform.localPosition = Vector3.zero;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Food") {
-            Grow();
+            Grow(); Grow(); Grow(); Grow(); Grow();
+        } else if (other.tag == "Obstacle") {
+            ResetState(); //Debug.Log("aa");
         }
     }
 }
