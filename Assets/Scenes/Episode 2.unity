@@ -12820,6 +12820,7 @@ GameObject:
   - component: {fileID: 261430915}
   - component: {fileID: 261430914}
   - component: {fileID: 261430913}
+  - component: {fileID: 261430916}
   m_Layer: 5
   m_Name: Wall
   m_TagString: Obstacle
@@ -12843,8 +12844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109, y: -2.6}
-  m_SizeDelta: {x: 0.841, y: 154.82}
+  m_AnchoredPosition: {x: 109, y: -2.7646}
+  m_SizeDelta: {x: 0.841, y: 155.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &261430913
 BoxCollider2D:
@@ -12859,7 +12860,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00033825636, y: -0.070869446}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12870,7 +12871,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.75}
+  m_Size: {x: 0.82718563, y: 155.27144}
   m_EdgeRadius: 0
 --- !u!114 &261430914
 MonoBehaviour:
@@ -12910,6 +12911,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261430911}
   m_CullTransparentMesh: 1
+--- !u!50 &261430916
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261430911}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &261994809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54491,9 +54513,10 @@ GameObject:
   - component: {fileID: 1327785464}
   - component: {fileID: 1327785463}
   - component: {fileID: 1327785462}
+  - component: {fileID: 1327785465}
   m_Layer: 5
   m_Name: Wall
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54581,6 +54604,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327785460}
   m_CullTransparentMesh: 1
+--- !u!50 &1327785465
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327785460}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1341272431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63160,6 +63204,7 @@ GameObject:
   - component: {fileID: 1541125914}
   - component: {fileID: 1541125913}
   - component: {fileID: 1541125912}
+  - component: {fileID: 1541125915}
   m_Layer: 5
   m_Name: Wall
   m_TagString: Obstacle
@@ -63183,8 +63228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107, y: -3.5}
-  m_SizeDelta: {x: 0.7307, y: 153.15}
+  m_AnchoredPosition: {x: -107.08026, y: -3.4975019}
+  m_SizeDelta: {x: 0.8912, y: 153.6835}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1541125912
 BoxCollider2D:
@@ -63199,7 +63244,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.002756536, y: -0.470356}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -63210,7 +63255,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.75}
+  m_Size: {x: 0.89060724, y: 155.26987}
   m_EdgeRadius: 0
 --- !u!114 &1541125913
 MonoBehaviour:
@@ -63250,6 +63295,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541125910}
   m_CullTransparentMesh: 1
+--- !u!50 &1541125915
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541125910}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1545194711
 GameObject:
   m_ObjectHideFlags: 0
@@ -73693,8 +73759,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 104.343765, y: 78.65306}
-  m_SizeDelta: {x: 12.0982, y: 12.3139}
+  m_AnchoredPosition: {x: 104.63, y: 78.93}
+  m_SizeDelta: {x: 12.0982, y: 11.2202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838856974
 MonoBehaviour:
@@ -74981,6 +75047,7 @@ GameObject:
   - component: {fileID: 1877940239}
   - component: {fileID: 1877940238}
   - component: {fileID: 1877940237}
+  - component: {fileID: 1877940240}
   m_Layer: 5
   m_Name: Wall
   m_TagString: Obstacle
@@ -75020,7 +75087,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.1434828, y: 0.026836395}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75031,7 +75098,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.75}
+  m_Size: {x: 1.0369656, y: 216.97873}
   m_EdgeRadius: 0
 --- !u!114 &1877940238
 MonoBehaviour:
@@ -75071,6 +75138,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877940235}
   m_CullTransparentMesh: 1
+--- !u!50 &1877940240
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877940235}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1881686244
 GameObject:
   m_ObjectHideFlags: 0
@@ -76321,6 +76409,7 @@ GameObject:
   - component: {fileID: 1905297455}
   - component: {fileID: 1905297454}
   - component: {fileID: 1905297453}
+  - component: {fileID: 1905297456}
   m_Layer: 5
   m_Name: Wall
   m_TagString: Obstacle
@@ -76360,7 +76449,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0051014423, y: 0.008888245}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76371,7 +76460,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.75}
+  m_Size: {x: 1.2839956, y: 216.88405}
   m_EdgeRadius: 0
 --- !u!114 &1905297454
 MonoBehaviour:
@@ -76411,6 +76500,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905297451}
   m_CullTransparentMesh: 1
+--- !u!50 &1905297456
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905297451}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1911793809
 GameObject:
   m_ObjectHideFlags: 0
