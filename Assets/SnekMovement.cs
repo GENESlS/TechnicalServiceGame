@@ -6,8 +6,11 @@ public class SnekMovement : MonoBehaviour
     private Vector2 _direction = Vector2.right;
     private List<Transform> _segments= new List<Transform>();
     public Transform segmentPrefab;
-    //public int initialSize = 4;
 
+    private float time = 1;
+    public GameObject a;
+
+    //public int initialSize = 4;
     private void OnEnable()
     {
         ResetState();
@@ -24,6 +27,11 @@ public class SnekMovement : MonoBehaviour
         } else if (Input.GetKeyDown(KeyCode.D)) {
             _direction = Vector2.right; 
         }
+
+        time += Time.deltaTime;
+        if ((int)time %5 == 0) { a.GetComponent<NonStopTimer>().SettimeLeft(a.GetComponent<NonStopTimer>().GettimeLeft() - 4); time++; } 
+
+    
     }
 
     private void FixedUpdate(){

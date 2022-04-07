@@ -24,6 +24,8 @@ public class Appear : MonoBehaviour
                     this.gameObject.GetComponent<Image>().enabled = true;
                     c.SetActive(true);
                     d.SetActive(true);
+                } else {
+                    timeLeft = 10;
                 }
             } else { this.gameObject.SetActive(false); }
         }
