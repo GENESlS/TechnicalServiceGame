@@ -3,18 +3,27 @@ using TMPro;
 
 public class NonStopTimer : MonoBehaviour
 {
-    float t;
+    //float t;
     public GameObject indText;
     public bool disableBckgrSound;
-    public float timeLeft = 40;
+    private static float timeLeft = 180;
     public GameObject failScreen;
     GameObject xz;
     AudioManager aa;
     //int flag = 0;
 
+    public float GettimeLeft()
+    {
+        return timeLeft;
+    }
+    public void SettimeLeft(float i)
+    {
+        timeLeft = i;
+    }
+
     private void Awake()
     {
-        t = timeLeft;
+       // t = timeLeft;
         xz = GameObject.Find("AudioManager");
         aa = xz.GetComponent<AudioManager>();
         // aa = GameObject.Find(AudioManager.Instantiate)
@@ -39,5 +48,9 @@ public class NonStopTimer : MonoBehaviour
             this.enabled = false;
             if (disableBckgrSound) aa.StopPlaying("Theme");
         }
+    }
+
+    public void Reset(){
+        timeLeft = 180;
     }
 }

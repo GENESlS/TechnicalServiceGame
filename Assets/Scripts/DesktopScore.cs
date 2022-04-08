@@ -31,7 +31,7 @@ public class DesktopScore : MonoBehaviour
         }
         if (sdfasd == 0)
         {
-            if (this.gameObject.GetComponent<MinigameScore>().flag == 1 && done == true && done2 == true)
+            if (/*this.gameObject.GetComponent<MinigameScore>().flag == 1 && */ done == true && done2 == true)
             {
                 StartCoroutine(Later());
                 f.SetActive(false);              
