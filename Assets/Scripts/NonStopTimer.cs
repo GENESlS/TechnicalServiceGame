@@ -49,4 +49,8 @@ public class NonStopTimer : MonoBehaviour
             if (disableBckgrSound) aa.StopPlaying("Theme");
         }
     }
+
+    public void Reset(){
+        timeLeft = 180;
+    }
 }

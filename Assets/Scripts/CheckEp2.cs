@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckEp2 : MonoBehaviour
 {
-    public GameObject a, b, d, e, f;
+    public GameObject a, b, d, e, f, g;
     public Sprite c;
     GameObject x;
     AudioManager y;
@@ -27,6 +27,7 @@ public class CheckEp2 : MonoBehaviour
     {
         e.SetActive(false);
         f.SetActive(false);
+        g.SetActive(false);
         yield return new WaitForSecondsRealtime(3);
         d.SetActive(true);
         y.StopPlaying("Theme");
