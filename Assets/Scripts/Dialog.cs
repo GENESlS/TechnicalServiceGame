@@ -20,8 +20,7 @@ public class Dialog : MonoBehaviour
             //directionFlag = true ;
         } else
         {
-            b.Play("Base Layer.leanLeft"/*, 0, 1*/);
-            leftDialog.SetActive(true);
+            StartCoroutine(Ex3());
             Desktop.SetActive(false);
         }
     }
@@ -46,6 +45,13 @@ public class Dialog : MonoBehaviour
         b.Play("Base Layer.leanRight"/*, 0, 1*/);
         yield return new WaitForSecondsRealtime(1);
         rightDialog.SetActive(true);
+    }
+
+    IEnumerator Ex3()
+    {
+        b.Play("Base Layer.leanLeft"/*, 0, 1*/);
+        yield return new WaitForSecondsRealtime(1);
+        leftDialog.SetActive(true);
     }
 
     IEnumerator Example()
