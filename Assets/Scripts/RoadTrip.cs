@@ -14,12 +14,8 @@ public class RoadTrip : MonoBehaviour
     public void roadTrip()
     {
         StartCoroutine(Ani1());
-        this.GetComponent<Transform>().Rotate(0, 90,0);
-        a.Play("walk");
-        this.GetComponent<Transform>().Rotate(0, 90,0);
-        a.Play("walk");
-        a.Play("walk");
-        a.Play("walk");
+        
+        
     }
 
     IEnumerator Ani1()
@@ -28,8 +24,17 @@ public class RoadTrip : MonoBehaviour
         c.SetActive(false);
         d.SetActive(true);
         a.Play("standUp");
+        //Debug.Log("Standing Up !!");
         yield return new WaitForSecondsRealtime(1);
-        this.GetComponent<Transform>().Rotate(0,-90,0);
-        a.Play("walk");
+        this.GetComponent<Transform>().Rotate(0 , -90, 0);
+        a.Play("walk 1"); 
+        yield return new WaitForSecondsRealtime(1);
+        this.GetComponent<Transform>().Rotate(0, 90,0);
+        a.Play("walk 2");
+        yield return new WaitForSecondsRealtime(1);
+        a.Play("walk 2_1");
+        yield return new WaitForSecondsRealtime(1);
+        this.GetComponent<Transform>().Rotate(0, 90,0);
+        a.Play("walk 3");
     }
 }
