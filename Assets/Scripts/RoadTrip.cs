@@ -11,11 +11,17 @@ public class RoadTrip : MonoBehaviour
         a = GetComponent<Animator>();
     }
 
+    void Update()
+    {
+        if (this.gameObject.GetComponent<Transform>().position.x <= -20){
+             this.gameObject.GetComponent<RoadTrip>().enabled = false;
+         }
+    }
+
     public void roadTrip()
     {
         StartCoroutine(Ani1());
-        
-        
+        //Vector3(-20.0658417,-0.0154353976,-6.00324059);
     }
 
     IEnumerator Ani1()
