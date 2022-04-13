@@ -4,7 +4,7 @@ using UnityEngine;
 public class RoadTrip : MonoBehaviour
 {
     Animator a;
-    public GameObject b, c, d;
+    public GameObject ScreenCam, Canvas, MainCamera, doorUI;
     //int i;
     void Start()
     {
@@ -13,7 +13,9 @@ public class RoadTrip : MonoBehaviour
 
     void Update()
     {
-        if (this.gameObject.GetComponent<Transform>().position.x <= -20){
+        if (this.gameObject.GetComponent<Transform>().localPosition.x <= -20){
+             doorUI.SetActive(true);
+             a.enabled = false;
              this.gameObject.GetComponent<RoadTrip>().enabled = false;
          }
     }
@@ -26,9 +28,9 @@ public class RoadTrip : MonoBehaviour
 
     IEnumerator Ani1()
     {
-        b.SetActive(false);
-        c.SetActive(false);
-        d.SetActive(true);
+        ScreenCam.SetActive(false);
+        Canvas.SetActive(false);
+        MainCamera.SetActive(true);
         a.Play("standUp");
         //Debug.Log("Standing Up !!");
         yield return new WaitForSecondsRealtime(1);
