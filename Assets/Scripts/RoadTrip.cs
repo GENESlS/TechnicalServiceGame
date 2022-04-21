@@ -34,15 +34,21 @@ public class RoadTrip : MonoBehaviour
         a.Play("standUp");
         //Debug.Log("Standing Up !!");
         yield return new WaitForSecondsRealtime(1);
-        this.GetComponent<Transform>().Rotate(0 , -90, 0);
-        a.Play("walk 1"); 
+        a.Play("headLeft");
         yield return new WaitForSecondsRealtime(1);
-        this.GetComponent<Transform>().Rotate(0, 90,0);
+        //this.GetComponent<Transform>().Rotate(0 , -90, 0);
+        a.Play("walk 1");
+        yield return new WaitForSecondsRealtime(1);
+        a.Play("headRight");
+        yield return new WaitForSecondsRealtime(1);
+        //this.GetComponent<Transform>().Rotate(0, 90,0);
         a.Play("walk 2");
         yield return new WaitForSecondsRealtime(1);
         a.Play("walk 2_1");
         yield return new WaitForSecondsRealtime(1);
-        this.GetComponent<Transform>().Rotate(0, 90,0);
+        a.Play("headRight");
+        yield return new WaitForSecondsRealtime(1);
+        //this.GetComponent<Transform>().Rotate(0, 90,0);
         a.Play("walk 3");
     }
 }
