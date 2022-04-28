@@ -7,6 +7,12 @@ public class TypeWriterEffect : MonoBehaviour
     public float delay = 0.1f;
     public string fullText;
     private string currentText = "";
+
+    [HideInInspector]
+    bool isDone = false;
+
+    public bool IsDone { get => isDone; set => isDone = value; }
+
     void Start()
     {
         StartCoroutine(ShowText());
@@ -20,6 +26,7 @@ public class TypeWriterEffect : MonoBehaviour
             GetComponent<Text>().text = currentText;
             yield return new WaitForSeconds(delay);
         }
+        IsDone = true;
     }
 
     
