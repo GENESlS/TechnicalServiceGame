@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour
+public class ArrivedToPC : MonoBehaviour
 {
     Animator a;
     public GameObject Player, MainCamera, ActionCamera;
+    Vector3 landMark = new Vector3((float)-1.24914932,(float)-0.0154354004,(float)-2.91096115);
     int flag = 0;
 
     void Start()
@@ -13,7 +14,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void Update()
     {
-        if (Player.GetComponent<Transform>().localPosition.x <= -1 && flag == 0){
+        if (Player.GetComponent<Transform>().localPosition == landMark && flag == 0){
             a.GetComponent<RoadTrip>().enabled = false;
             StartCoroutine(First());            
             flag = 1;
@@ -33,5 +34,7 @@ public class NewBehaviourScript : MonoBehaviour
         a.Play("sitting");
         yield return new WaitForSecondsRealtime(1);
         a.Play("sitIdle");
+        yield return new WaitForSecondsRealtime(1);
+        a.speed = 0;
     }
 }
