@@ -5,7 +5,7 @@ public class RoadTrip : MonoBehaviour
 {
     Animator a;
     public GameObject ScreenCam, Canvas, MainCamera, doorUI, BossCam;
-    int flag = 0;
+    int flag = 0, flag1 = 0;
     Vector3 bossRoom = new Vector3((float)-24.6100006,(float)-0.0154353967,(float)-5.5999999);
     Vector3 entrance;
     //int i;
@@ -26,8 +26,9 @@ public class RoadTrip : MonoBehaviour
              a.enabled = false;
              this.gameObject.GetComponent<RoadTrip>().enabled = false;
              flag = 1;
-         } else if (this.gameObject.GetComponent<Transform>().localPosition.x >= 0 && flag == 1){
+         } else if (this.gameObject.GetComponent<Transform>().localPosition.x >= 0 && flag == 1 && flag1 == 0){
              StartCoroutine(Ani3());
+             flag1 = 1;
          }
 
          
@@ -51,14 +52,7 @@ public class RoadTrip : MonoBehaviour
 
     public void ReturnSeat()
     {
-        this.transform.localPosition = entrance;
-        this.transform.Rotate(0, -90, 0);
-        a.enabled = false; a.enabled = true;
-        a.Rebind();
-        a.Update(0f);
-        a.Play("walk 3");
-        BossCam.SetActive(false);
-        MainCamera.SetActive(true);
+        StartCoroutine(Ani4());
     }
 
     IEnumerator Ani1()
@@ -104,9 +98,25 @@ public class RoadTrip : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         a.Play("walk 4");
         yield return new WaitForSecondsRealtime(1);
+        a.Play("walk 5");
+        yield return new WaitForSecondsRealtime(1);
         a.Play("headLeft");
         yield return new WaitForSecondsRealtime(1);
-        a.Play("walk 5");
+        a.Play("walk 6");
+    }
+
+    IEnumerator Ani4()
+    {
+        int x = 0;
+        yield return new WaitForSecondsRealtime(2);
+        this.transform.localPosition = entrance;
+        this.transform.Rotate(0, -90, 0);
+        a.enabled = false; a.enabled = true;
+        a.Rebind();
+        a.Update(0f);
+        a.Play("walk 3");
+        BossCam.SetActive(false);
+        MainCamera.SetActive(true);
     }
     
     
