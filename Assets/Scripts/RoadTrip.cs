@@ -4,7 +4,7 @@ using UnityEngine;
 public class RoadTrip : MonoBehaviour
 {
     Animator a;
-    public GameObject ScreenCam, Canvas, MainCamera, doorUI, BossCam;
+    public GameObject ScreenCam, Canvas, MainCamera, doorUI, BossCam, EmptyObject;
     int flag = 0, flag1 = 0;
     Vector3 bossRoom = new Vector3((float)-24.6100006,(float)-0.0154353967,(float)-5.5999999);
     Vector3 entrance;
@@ -102,12 +102,13 @@ public class RoadTrip : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         a.Play("headLeft");
         yield return new WaitForSecondsRealtime(1);
+        EmptyObject.SetActive(true);
         a.Play("walk 6");
     }
 
     IEnumerator Ani4()
     {
-        int x = 0;
+        EmptyObject.SetActive(false);
         yield return new WaitForSecondsRealtime(2);
         this.transform.localPosition = entrance;
         this.transform.Rotate(0, -90, 0);

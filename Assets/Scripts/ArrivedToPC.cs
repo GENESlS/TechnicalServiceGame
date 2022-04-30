@@ -5,7 +5,7 @@ public class ArrivedToPC : MonoBehaviour
 {
     Animator a;
     public GameObject Player, MainCamera, ActionCamera;
-    Vector3 landMark = new Vector3((float)-1.24914932,(float)-0.0154354004,(float)-2.91096115);
+    //Vector3 landMark = new Vector3((float)-1.24914932,(float)-0.0154354004,(float)-2.91096115);
     int flag = 0;
 
     void Start()
@@ -14,11 +14,10 @@ public class ArrivedToPC : MonoBehaviour
     }
     void Update()
     {
-        if (Player.GetComponent<Transform>().localPosition == landMark && flag == 0){
+        if (Player.GetComponent<Transform>().localPosition.x <= -1.15 && flag == 0){
             a.GetComponent<RoadTrip>().enabled = false;
             StartCoroutine(First());            
             flag = 1;
-            this.gameObject.SetActive(false);
         }     
     }
 
@@ -29,12 +28,16 @@ public class ArrivedToPC : MonoBehaviour
         a.Update(0f);
         a.Play("headLeft");
         yield return new WaitForSecondsRealtime(1);
+        //Debug.Log("1");
         MainCamera.SetActive(false);
         ActionCamera.SetActive(true);
+        //Debug.Log("2");
         a.Play("sitting");
         yield return new WaitForSecondsRealtime(1);
+        //Debug.Log("3");
         a.Play("sitIdle");
         yield return new WaitForSecondsRealtime(1);
         a.speed = 0;
+        this.gameObject.SetActive(false);
     }
 }
