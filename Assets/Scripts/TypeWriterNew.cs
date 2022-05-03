@@ -9,7 +9,6 @@ public class TypeWriterNew : MonoBehaviour
     Text _text;
 	TMP_Text _tmpProText;
 	string writer;
-    bool flag = false;
 
 	[SerializeField] float delayBeforeStart = 0f;
 	[SerializeField] float timeBtwChars = 0.1f;
@@ -37,7 +36,6 @@ public class TypeWriterNew : MonoBehaviour
 
 			StartCoroutine("TypeWriterTMP");
 		}
-        StartCoroutine(BlinkingCaret());
 	}
 
 	IEnumerator TypeWriterText()
@@ -61,9 +59,6 @@ public class TypeWriterNew : MonoBehaviour
         {
 			_text.text = _text.text.Substring(0, _text.text.Length - leadingChar.Length);
 		}
-
-        flag = true;
-
 	}
 
 	IEnumerator TypeWriterTMP()
@@ -87,18 +82,48 @@ public class TypeWriterNew : MonoBehaviour
 		{
 			_tmpProText.text = _tmpProText.text.Substring(0, _tmpProText.text.Length - leadingChar.Length);
 		}
+
+		//StartCoroutine(BlinkingCaret());
 	}
 
-    IEnumerator BlinkingCaret()
+    /* IEnumerator BlinkingCaret()
     {
+
+
+
+		
+		TMP_TextInfo textInfo = _tmpProText.textInfo;
+		Color32[] newVertexColors;
+		Color32 c0 = _tmpProText.color;
         while (true)
         {
-            if (flag)
-            {
-                _tmpProText.maxVisibleCharacters = _tmpProText.text.Length - 1;
-                yield return new WaitForSecondsRealtime(1);
-                _tmpProText.maxVisibleCharacters = _tmpProText.text.Length;
-            }
-        }
-    }
+			int materialIndex = textInfo.characterInfo[_tmpProText.text.Length].materialReferenceIndex;
+
+            newVertexColors = textInfo.meshInfo[materialIndex].colors32;
+
+            int vertexIndex = textInfo.characterInfo[_tmpProText.text.Length].vertexIndex;
+
+			c0 = new Color32(255, 255, 255, 0);
+
+                newVertexColors[vertexIndex + 0] = c0;
+                newVertexColors[vertexIndex + 1] = c0;
+                newVertexColors[vertexIndex + 2] = c0;
+                newVertexColors[vertexIndex + 3] = c0;
+
+            _tmpProText.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+			
+			yield return new WaitForSecondsRealtime(1);
+
+			c0 = new Color32(255, 255, 255, 255);
+
+                newVertexColors[vertexIndex + 0] = c0;
+                newVertexColors[vertexIndex + 1] = c0;
+                newVertexColors[vertexIndex + 2] = c0;
+                newVertexColors[vertexIndex + 3] = c0;
+
+            _tmpProText.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+
+			yield return new WaitForSecondsRealtime(1); 
+        } 
+    } */
 }
