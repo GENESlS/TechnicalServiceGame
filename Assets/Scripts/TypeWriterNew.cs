@@ -10,12 +10,15 @@ public class TypeWriterNew : MonoBehaviour
 	TMP_Text _tmpProText;
 	string writer;
 
+	private bool isDone = false;
+
+	public bool IsDone { get => isDone; set => isDone = value; }
+
 	[SerializeField] float delayBeforeStart = 0f;
 	[SerializeField] float timeBtwChars = 0.1f;
 	[SerializeField] string leadingChar = "";
 	[SerializeField] bool leadingCharBeforeDelay = false;
 
-	// Use this for initialization
 	void Start()
 	{
 		_text = GetComponent<Text>()!;
@@ -82,16 +85,22 @@ public class TypeWriterNew : MonoBehaviour
 		{
 			_tmpProText.text = _tmpProText.text.Substring(0, _tmpProText.text.Length - leadingChar.Length);
 		}
-
-		//StartCoroutine(BlinkingCaret());
+		IsDone = true;
+		StartCoroutine(BlinkingCaret());
 	}
 
-    /* IEnumerator BlinkingCaret()
+    IEnumerator BlinkingCaret()
     {
-
-
-
+		_tmpProText.text += "|";
+		while (true)
+		{
+			yield return new WaitForSecondsRealtime(1);
+			_tmpProText.maxVisibleCharacters = _tmpProText.text.Length - 1;
+			yield return new WaitForSecondsRealtime(1);
+			_tmpProText.maxVisibleCharacters = _tmpProText.text.Length;
+		}
 		
+		/*
 		TMP_TextInfo textInfo = _tmpProText.textInfo;
 		Color32[] newVertexColors;
 		Color32 c0 = _tmpProText.color;
@@ -124,6 +133,6 @@ public class TypeWriterNew : MonoBehaviour
             _tmpProText.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
 
 			yield return new WaitForSecondsRealtime(1); 
-        } 
-    } */
+        } */ 
+    } 
 }

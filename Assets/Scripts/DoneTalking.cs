@@ -7,7 +7,7 @@ public class DoneTalking : MonoBehaviour
 
     private void Update()
     {
-        if (SpeechText.GetComponent<TypeWriterEffect>().IsDone){
+        if (SpeechText.GetComponent<TypeWriterNew>().IsDone){
             this.gameObject.GetComponent<Image>().enabled = true;
             this.gameObject.GetComponent<Button>().enabled = true;
             this.gameObject.GetComponent<Animator>().enabled = true;
