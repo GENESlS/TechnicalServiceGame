@@ -4,7 +4,7 @@ using UnityEngine;
 public class RoadTrip : MonoBehaviour
 {
     Animator a;
-    public GameObject ScreenCam, Canvas, MainCamera, doorUI, BossCam, EmptyObject;
+    public GameObject ScreenCam, Canvas, MainCamera, doorUI, BossCam, EmptyObject, Boss;
     int flag = 0, flag1 = 0;
     Vector3 bossRoom = new Vector3((float)-24.6100006,(float)-0.0154353967,(float)-5.5999999);
     Vector3 entrance;
@@ -17,6 +17,7 @@ public class RoadTrip : MonoBehaviour
     void Start()
     {
         a = GetComponent<Animator>();
+        //b = Boss.GetComponent<Animator>();
     }
 
     void Update()
@@ -45,6 +46,7 @@ public class RoadTrip : MonoBehaviour
         flag = 1;
         StopAllCoroutines();
         a.enabled = true;
+        Boss.SetActive(true);
         a.Rebind();
         a.Update(0f);
         StartCoroutine(Ani2());
@@ -64,19 +66,19 @@ public class RoadTrip : MonoBehaviour
         //Debug.Log("Standing Up !!");
         yield return new WaitForSecondsRealtime(1);
         a.Play("headLeft");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1.5f);
         //this.GetComponent<Transform>().Rotate(0, -90, 0);
         a.Play("walk 1");
         yield return new WaitForSecondsRealtime(1);
         a.Play("headRight");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1.5f);
         //this.GetComponent<Transform>().Rotate(0, 90,0);
         a.Play("walk 2");
         yield return new WaitForSecondsRealtime(1);
         a.Play("walk 2_1");
         yield return new WaitForSecondsRealtime(1);
         a.Play("headRight");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1.5f);
         //this.GetComponent<Transform>().Rotate(0, 90,0);
         a.Play("walk 3");
     }
@@ -95,13 +97,13 @@ public class RoadTrip : MonoBehaviour
     IEnumerator Ani3()
     {
         a.Play("headLeft");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1.5f);
         a.Play("walk 4");
         yield return new WaitForSecondsRealtime(1);
         a.Play("walk 5");
         yield return new WaitForSecondsRealtime(1);
         a.Play("headLeft");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1.5f);
         EmptyObject.SetActive(true);
         a.Play("walk 6");
     }
@@ -110,6 +112,7 @@ public class RoadTrip : MonoBehaviour
     {
         EmptyObject.SetActive(false);
         yield return new WaitForSecondsRealtime(2);
+        Boss.SetActive(false);
         this.transform.localPosition = entrance;
         this.transform.Rotate(0, -90, 0);
         a.enabled = false; a.enabled = true;

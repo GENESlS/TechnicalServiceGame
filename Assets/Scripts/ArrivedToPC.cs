@@ -27,7 +27,7 @@ public class ArrivedToPC : MonoBehaviour
         a.Rebind();
         a.Update(0f);
         a.Play("headLeft");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1.5f);
         //Debug.Log("1");
         MainCamera.SetActive(false);
         ActionCamera.SetActive(true);
