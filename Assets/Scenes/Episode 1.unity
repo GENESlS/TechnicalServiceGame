@@ -15782,6 +15782,7 @@ GameObject:
   - component: {fileID: 346163696}
   - component: {fileID: 346163695}
   - component: {fileID: 346163694}
+  - component: {fileID: 346163697}
   m_Layer: 5
   m_Name: DialogStarter
   m_TagString: Untagged
@@ -15972,6 +15973,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 346163697}
+        m_TargetAssemblyTypeName: NewProfile, Assembly-CSharp
+        m_MethodName: SaveProfile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &346163695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16010,6 +16023,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346163692}
   m_CullTransparentMesh: 1
+--- !u!114 &346163697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346163692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531308118a953da4dac3b42ef5241f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: {fileID: 1514405660}
+  hobby: {fileID: 1007544101}
 --- !u!1 &346781379
 GameObject:
   m_ObjectHideFlags: 0
