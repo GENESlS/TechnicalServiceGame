@@ -5,15 +5,19 @@ public class NewProfile : MonoBehaviour
 {
     public GameObject Name;
     public GameObject hobby;
-    TMP_Text a;
+    string a = "Seçin";
+    TMP_Dropdown dropdown;
+    void Start()
+    {
+        dropdown = hobby.GetComponent<TMP_Dropdown>();
+    }
     public void SaveProfile()
     {
-        a.SetText("Seçin");
         if (Name.GetComponent<TMP_InputField>().text != "" 
-        && hobby.GetComponent<TMP_Dropdown>().itemText != a)
+        && hobby.GetComponent<TMP_Dropdown>().itemText.ToString() != a)
         {
             PlayerPrefs.SetString("name", Name.GetComponent<TMP_InputField>().text);
-            PlayerPrefs.SetString("hobby", hobby.GetComponent<TMP_Dropdown>().itemText.ToString());
+            PlayerPrefs.SetString("hobby", dropdown.options[dropdown.value].text);
             PlayerPrefs.Save();
         }
     }
