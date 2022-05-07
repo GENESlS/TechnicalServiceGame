@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TimeBomb : MonoBehaviour
 {
-    float timeLeft = 5f;
+    float timeLeft = 8f;
 
     private void OnEnable()
     {
-        timeLeft = 5f;
+        timeLeft = 8f;
     }
     void Update()
     {
