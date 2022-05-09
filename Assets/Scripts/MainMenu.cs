@@ -48,6 +48,11 @@ public class MainMenu : MonoBehaviour
                     Stage5.SetActive(true);
                     break;
             }
+        } else {
+            Stage2.SetActive(false);
+            Stage3.SetActive(false);
+            Stage4.SetActive(false);
+            Stage5.SetActive(false);
         }
     }
 

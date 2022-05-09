@@ -14,7 +14,7 @@ public class NewProfile : MonoBehaviour
     public void SaveProfile()
     {
         if (Name.GetComponent<TMP_InputField>().text != "" 
-        && hobby.GetComponent<TMP_Dropdown>().itemText.ToString() != a)
+        && dropdown.options[dropdown.value].text != a)
         {
             PlayerPrefs.SetString("name", Name.GetComponent<TMP_InputField>().text);
             PlayerPrefs.SetString("hobby", dropdown.options[dropdown.value].text);
