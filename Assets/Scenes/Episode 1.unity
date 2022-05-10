@@ -18207,7 +18207,7 @@ GameObject:
   - component: {fileID: 369005069}
   - component: {fileID: 369005068}
   m_Layer: 5
-  m_Name: Text (4)
+  m_Name: Text (4) P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23300,7 +23300,7 @@ GameObject:
   - component: {fileID: 489185421}
   - component: {fileID: 489185420}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: 'Button (3) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23402,45 +23402,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 489185418}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1570902072}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 670470433}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 369005067}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1036154690}
+        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
+        m_MethodName: Normalize
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23538,7 +23502,7 @@ GameObject:
   - component: {fileID: 492398805}
   - component: {fileID: 492398804}
   m_Layer: 5
-  m_Name: Text (5)
+  m_Name: Text (5) P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29809,7 +29773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ekledim listeme :) \u015Eu The Road ' \u0131 bitireyim ba\u015Fta."
+  m_text: "Saol, iyi \xE7al\u0131\u015Fmalar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -32457,7 +32421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &754055864
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43449,7 +43413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Aynen. '
+  m_text: "\u0130\u015F g\xFC\xE7 ko\u015Fturuyoruz ya i\u015Fte."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -44316,7 +44280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\xFCn gece bitirdim. Nefis bir\u015Fey olmu\u015F, tavsiye ederim."
+  m_text: "Hadi bakal\u0131m, kolay gelsin. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -57069,7 +57033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Sixth Extinction .
+  m_text: "\u0130yiyim ya saol, sen nas\u0131ls\u0131n ?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -65092,7 +65056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bilim makalesi tad\u0131nda ama hi\xE7 s\u0131km\u0131yor."
+  m_text: Sana da.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -68069,7 +68033,7 @@ GameObject:
   - component: {fileID: 1570902075}
   - component: {fileID: 1570902074}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Button (4) P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68692,8 +68656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.3557014, y: 0.9477997}
-  m_SizeDelta: {x: -8.9162, y: -7.2537}
+  m_AnchoredPosition: {x: 1.3557014, y: -0.91529846}
+  m_SizeDelta: {x: -8.9162, y: -10.9798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579931322
 MonoBehaviour:
@@ -69784,7 +69748,7 @@ MonoBehaviour:
   gameDialog: {fileID: 489764160}
   bookDialog: {fileID: 1693433619}
   sportDialog: {fileID: 1020178031}
-  defaultDialog: {fileID: 0}
+  defaultDialog: {fileID: 754055863}
 --- !u!1001 &1601604454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78277,7 +78241,7 @@ GameObject:
   - component: {fileID: 1880188820}
   - component: {fileID: 1880188819}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: Button (5) P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

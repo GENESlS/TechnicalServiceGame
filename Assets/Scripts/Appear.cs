@@ -4,7 +4,7 @@ using UnityEngine;
 public class Appear : MonoBehaviour
 {
     private static float t;
-    private float timeLeft = 40;
+    private float timeLeft = 30;
     public GameObject a,b,c,d;
 
     private void OnDisable()
