@@ -12351,7 +12351,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1643570580}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.029861476
+  m_Size: 0.029608771
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17222,7 +17222,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000034618, y: -0}
-  m_SizeDelta: {x: -0.000030518, y: 3515}
+  m_SizeDelta: {x: -0.000030518, y: 3545}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &344776979
 MonoBehaviour:
@@ -17236,7 +17236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 2
 --- !u!114 &344776980
 MonoBehaviour:
@@ -24327,24 +24327,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CREATE PROC dbo.LibraryManagementSystemProcedure\r\nAS\r\nCREATE DATABASE
+  m_text: "CREATE PROC dbo.LibraryManagementSystemProcedure\r\nAS\r\nCREATE .........................
     db_LibraryManagement\r\n\r\nGO\r\n\t/* ======================= TABLES ========================*/\r\n\r\n\r\n\tCREATE
-    TABLE tbl_publisher (\r\n\t\tpublisher_PublisherName VARCHAR(100) PRIMARY KEY
+    TABLE tbl_publisher (\r\n\t\tpublisher_PublisherName VARCHAR(100) ..............................
     NOT NULL,\r\n\t\tpublisher_PublisherAddress VARCHAR(200) NOT NULL,\r\n\t\tpublisher_PublisherPhone
     VARCHAR(50) NOT NULL,\r\n\t);\r\n\r\n\tCREATE TABLE tbl_book (\r\n\t\tbook_BookID
     INT PRIMARY KEY NOT NULL IDENTITY (1,1),\r\n\t\tbook_Title VARCHAR(100) NOT NULL,\r\n\t\tbook_PublisherName
     VARCHAR(100) NOT NULL CONSTRAINT fk_publisher_name1 FOREIGN KEY REFERENCES tbl_publisher(publisher_PublisherName)
-    ON UPDATE CASCADE ON DELETE CASCADE,\r\n\t);\r\n\r\n\tCREATE TABLE tbl_library_branch
-    (\r\n\t\tlibrary_branch_BranchID INT PRIMARY KEY NOT NULL IDENTITY (1,1),\r\n\t\tlibrary_branch_BranchName
-    VARCHAR(100) NOT NULL,\r\n\t\tlibrary_branch_BranchAddress VARCHAR(200) NOT NULL,\r\n\t);\r\n\r\n\tSELECT
-    * FROM tbl_library_branch\r\n\r\n\tCREATE TABLE tbl_borrower (\r\n\t\tborrower_CardNo
-    INT PRIMARY KEY NOT NULL IDENTITY (100,1),\r\n\t\tborrower_BorrowerName VARCHAR(100)
-    NOT NULL,\r\n\t\tborrower_BorrowerAddress VARCHAR(200) NOT NULL,\r\n\t\tborrower_BorrowerPhone
-    VARCHAR(50) NOT NULL,\r\n\t);\r\n\r\n\tSELECT * FROM tbl_borrower\r\n\r\n\tCREATE
-    TABLE tbl_book_loans (\r\n\t\tbook_loans_LoansID INT PRIMARY KEY NOT NULL IDENTITY
-    (1,1),\r\n\t\tbook_loans_BookID INT NOT NULL CONSTRAINT fk_book_id1 FOREIGN KEY
-    REFERENCES tbl_book(book_BookID) ON UPDATE CASCADE ON DELETE CASCADE,\r\n\t\tbook_loans_BranchID
-    INT NOT NULL CONSTRAINT fk_branch_id1 FOREIGN KEY REFERENCES tbl_library_branch(library_branch_BranchID)
+    ON UPDATE CASCADE ON DELETE CASCADE,\r\n\t);\r\n\r\n\t......................................
+    tbl_library_branch (\r\n\t\tlibrary_branch_BranchID INT PRIMARY KEY NOT NULL
+    IDENTITY (1,1),\r\n\t\tlibrary_branch_BranchName VARCHAR(100) NOT NULL,\r\n\t\tlibrary_branch_BranchAddress
+    VARCHAR(200) NOT NULL,\r\n\t);\r\n\r\n\tSELECT ......................... tbl_library_branch\r\n\r\n\tCREATE
+    TABLE tbl_borrower (\r\n\t\tborrower_CardNo INT PRIMARY KEY NOT NULL IDENTITY
+    (100,1),\r\n\t\tborrower_BorrowerName VARCHAR(100) NOT NULL,\r\n\t\tborrower_BorrowerAddress
+    VARCHAR(200) NOT NULL,\r\n\t\tborrower_BorrowerPhone VARCHAR(50) NOT NULL,\r\n\t);\r\n\r\n\tSELECT
+    * FROM tbl_borrower\r\n\r\n\tCREATE TABLE tbl_book_loans (\r\n\t\tbook_loans_LoansID
+    INT PRIMARY KEY NOT NULL IDENTITY (1,1),\r\n\t\tbook_loans_BookID INT NOT NULL
+    CONSTRAINT fk_book_id1 FOREIGN KEY REFERENCES tbl_book(book_BookID) ON UPDATE
+    CASCADE ON DELETE CASCADE,\r\n\t\tbook_loans_BranchID INT NOT NULL CONSTRAINT
+    fk_branch_id1 FOREIGN KEY REFERENCES tbl_library_branch(library_branch_BranchID)
     ON UPDATE CASCADE ON DELETE CASCADE,\r\n\t\tbook_loans_CardNo INT NOT NULL CONSTRAINT
     fk_cardno FOREIGN KEY REFERENCES tbl_borrower(borrower_CardNo) ON UPDATE CASCADE
     ON DELETE CASCADE,\r\n\t\tbook_loans_DateOut VARCHAR(50) NOT NULL,\r\n\t\tbook_loans_DueDate
@@ -24361,8 +24362,8 @@ MonoBehaviour:
     CONSTRAINT fk_book_id3 FOREIGN KEY REFERENCES tbl_book(book_BookID) ON UPDATE
     CASCADE ON DELETE CASCADE,\r\n\t\tbook_authors_AuthorName VARCHAR(50) NOT NULL,\r\n\t);\r\n\r\n\tSELECT
     * FROM tbl_book_authors\r\n\r\n/*======================== END TABLES ======================*/\r\n\r\n\r\n/*====================
-    POPULATING TABLES ======================*/\r\n\t\r\n\tINSERT INTO tbl_publisher\r\n\t\t(publisher_PublisherName,
-    publisher_PublisherAddress, publisher_PublisherPhone)\r\n\t\tVALUES\r\n\t\t('DAW
+    POPULATING TABLES ======================*/\r\n\t\r\n\tINSERT .................
+    tbl_publisher\r\n\t\t(publisher_PublisherName, publisher_PublisherAddress, publisher_PublisherPhone)\r\n\t\t...................\r\n\t\t('DAW
     Books','375 Hudson Street, New York, NY 10014','212-366-2000'),\r\n\t\t('Viking','375
     Hudson Street, New York, NY 10014','212-366-2000'),\r\n\t\t('Signet Books','375
     Hudson Street, New York, NY 10014','212-366-2000'),\r\n\t\t('Chilton Books','Not
@@ -24391,8 +24392,8 @@ MonoBehaviour:
     'Scholastic'),\r\n\t\t('Harry Potter and the Chamber of Secrets', 'Bloomsbury'),\r\n\t\t('Harry
     Potter and the Prisoner of Azkaban', 'Bloomsbury'),\r\n\t\t('The Fellowship of
     the Ring', 'George Allen & Unwin'),\r\n\t\t('A Game of Thrones', 'Bantam'),\r\n\t\t('The
-    Lost Tribe', 'Picador USA');\r\n\r\n\tSELECT * FROM tbl_book WHERE book_PublisherName
-    = 'George Allen & Unwin'\r\n\r\n\tINSERT INTO tbl_library_branch\r\n\t\t(library_branch_BranchName,
+    Lost Tribe', 'Picador USA');\r\n\r\n\tSELECT * FROM tbl_book .................
+    book_PublisherName = 'George Allen & Unwin'\r\n\r\n\tINSERT INTO tbl_library_branch\r\n\t\t(library_branch_BranchName,
     library_branch_BranchAddress)\r\n\t\tVALUES\r\n\t\t('Sharpstown','32 Corner Road,
     New York, NY 10012'),\r\n\t\t('Central','491 3rd Street, New York, NY 10014'),\r\n\t\t('Saline','40
     State Street, Saline, MI 48176'),\r\n\t\t('Ann Arbor','101 South University,
@@ -24423,18 +24424,18 @@ MonoBehaviour:
     END POPULATING TABLES ==============================*/\r\n\r\n/* ===================
     STORED PROCEDURE QUERY QUESTIONS =================================== */\r\n\r\n/*
     #1- How many copies of the book titled \"The Lost Tribe\" are owned by the library
-    branch whose name is \"Sharpstown\"? */\r\n\r\nCREATE PROC dbo.bookCopiesAtAllSharpstown
+    branch whose name is \"Sharpstown\"? */\r\n\r\n.................. PROC dbo.bookCopiesAtAllSharpstown
     \r\n(@bookTitle varchar(70) = 'The Lost Tribe', @branchName varchar(70) = 'Sharpstown')\r\nAS\r\nSELECT
     copies.book_copies_BranchID AS [Branch ID], branch.library_branch_BranchName
     AS [Branch Name],\r\n\t   copies.book_copies_No_Of_Copies AS [Number of Copies],\r\n\t  
-    book.book_Title AS [Book Title]\r\n\t   FROM tbl_book_copies AS copies\r\n\t\t\tINNER
+    book.book_Title ........ [Book Title]\r\n\t   FROM tbl_book_copies AS copies\r\n\t\t\tINNER
     JOIN tbl_book AS book ON copies.book_copies_BookID = book.book_BookID\r\n\t\t\tINNER
     JOIN tbl_library_branch AS branch ON book_copies_BranchID = branch.library_branch_BranchID\r\n\t  
     WHERE book.book_Title = @bookTitle AND branch.library_branch_BranchName = @branchName\r\nGO\r\nEXEC
     dbo.bookCopiesAtAllSharpstown \r\n\r\n\r\n/* #2- How many copies of the book
     titled \"The Lost Tribe\" are owned by each library branch? */\r\n\r\nCREATE
-    PROC dbo.bookCopiesAtAllBranches \r\n(@bookTitle varchar(70) = 'The Lost Tribe')\r\nAS\r\nSELECT
-    copies.book_copies_BranchID AS [Branch ID], branch.library_branch_BranchName
+    .............. dbo.bookCopiesAtAllBranches \r\n(@bookTitle varchar(70) = 'The
+    Lost Tribe')\r\nAS\r\nSELECT copies.book_copies_BranchID AS [Branch ID], branch.library_branch_BranchName
     AS [Branch Name],\r\n\t   copies.book_copies_No_Of_Copies AS [Number of Copies],\r\n\t  
     book.book_Title AS [Book Title]\r\n\t   FROM tbl_book_copies AS copies\r\n\t\t\tINNER
     JOIN tbl_book AS book ON copies.book_copies_BookID = book.book_BookID\r\n\t\t\tINNER
@@ -24443,19 +24444,19 @@ MonoBehaviour:
     #3- Retrieve the names of all borrowers who do not have any books checked out.
     */\r\n\t\t\r\nCREATE PROC dbo.NoLoans\r\nAS\r\nSELECT borrower_BorrowerName FROM
     tbl_borrower\r\n\tWHERE NOT EXISTS\r\n\t\t(SELECT * FROM tbl_book_loans\r\n\t\tWHERE
-    book_loans_CardNo = borrower_CardNo)\r\nGO\r\nEXEC dbo.NoLoans\r\n\r\n/* #4-
-    For each book that is loaned out from the \"Sharpstown\" branch and whose DueDate
-    is today, retrieve the book title, the borrower's name, and the borrower's address. 
-    */\r\n\r\nCREATE PROC dbo.LoanersInfo \r\n(@DueDate date = NULL, @LibraryBranchName
-    varchar(50) = 'Sharpstown')\r\nAS\r\nSET @DueDate = GETDATE()\r\nSELECT Branch.library_branch_BranchName
-    AS [Branch Name],  Book.book_Title [Book Name],\r\n\t   Borrower.borrower_BorrowerName
-    AS [Borrower Name], Borrower.borrower_BorrowerAddress AS [Borrower Address],\r\n\t  
-    Loans.book_loans_DateOut AS [Date Out], Loans.book_loans_DueDate [Due Date]\r\n\t  
-    FROM tbl_book_loans AS Loans\r\n\t\t\tINNER JOIN tbl_book AS Book ON Loans.book_loans_BookID
-    = Book.book_BookID\r\n\t\t\tINNER JOIN tbl_borrower AS Borrower ON Loans.book_loans_CardNo
-    = Borrower.borrower_CardNo\r\n\t\t\tINNER JOIN tbl_library_branch AS Branch ON
-    Loans.book_loans_BranchID = Branch.library_branch_BranchID\r\n\t\tWHERE Loans.book_loans_DueDate
-    = @DueDate AND Branch.library_branch_BranchName = @LibraryBranchName\r\nGO\r\nEXEC
+    book_loans_CardNo = borrower_CardNo)\r\nGO\r\n............... dbo.NoLoans\r\n\r\n/*
+    #4- For each book that is loaned out from the \"Sharpstown\" branch and whose
+    DueDate is today, retrieve the book title, the borrower's name, and the borrower's
+    address.  */\r\n\r\nCREATE PROC dbo.LoanersInfo \r\n(@DueDate date = NULL, @LibraryBranchName
+    varchar(50) = 'Sharpstown')\r\nAS\r\nSET @DueDate = GET..................\nSELECT
+    Branch.library_branch_BranchName AS [Branch Name],  Book.book_Title [Book Name],\r\n\t  
+    Borrower.borrower_BorrowerName AS [Borrower Name], Borrower.borrower_BorrowerAddress
+    AS [Borrower Address],\r\n\t   Loans.book_loans_DateOut AS [Date Out], Loans.book_loans_DueDate
+    [Due Date]\r\n\t   FROM tbl_book_loans AS Loans\r\n\t\t\tINNER JOIN tbl_book
+    AS Book ON Loans.book_loans_BookID = Book.book_BookID\r\n\t\t             .........................
+    tbl_borrower AS Borrower ON Loans.book_loans_CardNo = Borrower.borrower_CardNo\r\n\t\t\tINNER
+    JOIN tbl_library_branch AS Branch ON Loans.book_loans_BranchID = Branch.library_branch_BranchID\r\n\t\tWHERE
+    Loans.book_loans_DueDate = @DueDate AND Branch.library_branch_BranchName = @LibraryBranchName\r\nGO\r\nEXEC
     dbo.LoanersInfo \r\n\r\n/* #5- For each library branch, retrieve the branch name
     and the total number of books loaned out from that branch.  */\r\n\r\nCREATE
     PROC dbo.TotalLoansPerBranch\r\nAS\r\nSELECT  Branch.library_branch_BranchName
@@ -26692,7 +26693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &602565909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26710,7 +26711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 179.03685, y: -1109.7781}
+  m_AnchoredPosition: {x: 179.03685, y: -3530}
   m_SizeDelta: {x: 358.0737, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602565910
@@ -65193,7 +65194,7 @@ RectTransform:
   m_Father: {fileID: 13796795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.9701382}
+  m_AnchorMin: {x: 0, y: 0.9703912}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
