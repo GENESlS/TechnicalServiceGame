@@ -19051,10 +19051,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 320056409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267c2879bfce0d64e880296ce4721e08, type: 3}
+  m_Script: {fileID: 11500000, guid: c07b4bd4978e6924eb4586fa254fcf62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 2
+  a: {fileID: 35598913}
+  b: {fileID: 943929992}
 --- !u!114 &320056413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20108,7 +20109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267c2879bfce0d64e880296ce4721e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 8
 --- !u!114 &350863982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39196,7 +39196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267c2879bfce0d64e880296ce4721e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 8
 --- !u!1 &833531650
 GameObject:
   m_ObjectHideFlags: 0
@@ -43601,7 +43600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267c2879bfce0d64e880296ce4721e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 8
 --- !u!114 &924420036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53022,7 +53020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267c2879bfce0d64e880296ce4721e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 8
 --- !u!114 &1130803600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53832,7 +53829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07b4bd4978e6924eb4586fa254fcf62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 2
   a: {fileID: 127261148}
   b: {fileID: 1528242065}
 --- !u!114 &1160909653
@@ -57028,7 +57024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267c2879bfce0d64e880296ce4721e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 8
 --- !u!114 &1233736083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81963,7 +81958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267c2879bfce0d64e880296ce4721e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 8
 --- !u!114 &1760179074
 MonoBehaviour:
   m_ObjectHideFlags: 0

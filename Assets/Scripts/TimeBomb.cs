@@ -2,16 +2,10 @@ using UnityEngine;
 
 public class TimeBomb : MonoBehaviour
 {
-    public float timeLeft = 7f;
-    private float saveTime;
-
-    private void Start()
-    {
-        saveTime = timeLeft;
-    }
+    float timeLeft = 7f;
     private void OnEnable()
     {
-        timeLeft = saveTime;
+        timeLeft = 7f;
     }
     void Update()
     {
@@ -20,7 +14,7 @@ public class TimeBomb : MonoBehaviour
         {
             this.gameObject.SetActive(false);
             //timeLeft = 5f;
-           // this.enabled = false;
+            //this.enabled = false;
         } 
     }
 }

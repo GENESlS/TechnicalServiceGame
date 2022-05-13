@@ -16,13 +16,14 @@ public class CheckEp3 : MonoBehaviour
     }
     public void Checker()
     {
-        if (GameManager.GetComponent<CheckCodingEp3>().Check())
+        bool done = GameManager.GetComponent<CheckCodingEp3>().Check();
+        Debug.Log(done);
+        if (done)
         {
             Loading.SetActive(true);
             StartCoroutine(Asd());
-        } else {
-            StartCoroutine(Asd2());
-        }
+        } else StartCoroutine(Asd2());
+        
     }
 
     private IEnumerator Asd()
