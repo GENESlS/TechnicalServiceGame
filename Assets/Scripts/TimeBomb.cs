@@ -1,14 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TimeBomb : MonoBehaviour
 {
-    float timeLeft = 8f;
+    public float timeLeft = 7f;
+    private float saveTime;
 
+    private void Start()
+    {
+        saveTime = timeLeft;
+    }
     private void OnEnable()
     {
-        timeLeft = 8f;
+        timeLeft = saveTime;
     }
     void Update()
     {

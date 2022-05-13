@@ -24616,11 +24616,11 @@ RectTransform:
   m_Father: {fileID: 298555735}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -348.9559, y: -259.8}
-  m_SizeDelta: {x: 100.4885, y: 43.6227}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -597, y: 7}
+  m_SizeDelta: {x: 100.4885, y: 94.9438}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &480951335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60677,7 +60677,7 @@ GameObject:
   - component: {fileID: 1342259943}
   - component: {fileID: 1342259942}
   m_Layer: 5
-  m_Name: Timer
+  m_Name: (P)Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72833,11 +72833,11 @@ RectTransform:
   m_Father: {fileID: 298555735}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 305.95724, y: -263.55664}
-  m_SizeDelta: {x: 86.948, y: 46.6728}
-  m_Pivot: {x: 1, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 597, y: -7}
+  m_SizeDelta: {x: 100.4885, y: 94.9438}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1563678672
 MonoBehaviour:
   m_ObjectHideFlags: 0

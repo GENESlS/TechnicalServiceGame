@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckEp3 : MonoBehaviour
 {
-   public GameObject GameManager, /*LoadingPage,*/ VictoryScreen, UIInfo;
+   public GameObject GameManager, Loading, VictoryScreen, FailScreen, UIInfo;
     
     GameObject x;
     AudioManager y;
@@ -18,8 +18,10 @@ public class CheckEp3 : MonoBehaviour
     {
         if (GameManager.GetComponent<CheckCodingEp3>().Check())
         {
-            //LoadingPage.SetActive(true);
+            Loading.SetActive(true);
             StartCoroutine(Asd());
+        } else {
+            StartCoroutine(Asd2());
         }
     }
 
@@ -33,5 +35,12 @@ public class CheckEp3 : MonoBehaviour
         VictoryScreen.SetActive(true);
         y.StopPlaying("Theme");
         y.Play("Success");
+    }
+
+    private IEnumerator Asd2()
+    {
+        Loading.SetActive(true);
+        yield return new WaitForSecondsRealtime(3);
+        FailScreen.SetActive(true);
     }
 }
