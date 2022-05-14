@@ -29,10 +29,10 @@ public class CheckEp3 : MonoBehaviour
     private IEnumerator Asd()
     {
         GameManager.SetActive(false);
-        UIInfo.SetActive(false);
         //Timer.SetActive(false);
         //ChatBubble.SetActive(false);
         yield return new WaitForSecondsRealtime(3);
+        UIInfo.SetActive(false);
         VictoryScreen.SetActive(true);
         y.StopPlaying("Theme");
         y.Play("Success");

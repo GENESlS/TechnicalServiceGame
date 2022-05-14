@@ -19054,8 +19054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07b4bd4978e6924eb4586fa254fcf62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: {fileID: 35598913}
-  b: {fileID: 943929992}
+  a: {fileID: 127261148}
+  b: {fileID: 1528242065}
 --- !u!114 &320056413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36833,7 +36833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -65.8, y: 37.6}
+  m_AnchoredPosition: {x: -65.8, y: 23.000008}
   m_SizeDelta: {x: 134.1288, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790649980
@@ -53829,8 +53829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07b4bd4978e6924eb4586fa254fcf62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: {fileID: 127261148}
-  b: {fileID: 1528242065}
+  a: {fileID: 35598913}
+  b: {fileID: 943929992}
 --- !u!114 &1160909653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71641,7 +71641,6 @@ GameObject:
   - component: {fileID: 1528242070}
   - component: {fileID: 1528242069}
   - component: {fileID: 1528242068}
-  - component: {fileID: 1528242067}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -71668,23 +71667,6 @@ RectTransform:
   m_AnchoredPosition: {x: -100.8382, y: 42.30001}
   m_SizeDelta: {x: 5.9781, y: 7.2222}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1528242067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528242065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f184551922e1da4697763b0c87d4bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameManager: {fileID: 1069411207}
-  Loading: {fileID: 1160909650}
-  VictoryScreen: {fileID: 2140126474}
-  FailScreen: {fileID: 320056409}
-  UIInfo: {fileID: 298555734}
 --- !u!114 &1528242068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71729,7 +71711,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1528242067}
+      - m_Target: {fileID: 1875624841}
         m_TargetAssemblyTypeName: CheckEp3, Assembly-CSharp
         m_MethodName: Checker
         m_Mode: 1
@@ -80259,7 +80241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 72.6, y: 37.6}
+  m_AnchoredPosition: {x: 72.6, y: 23}
   m_SizeDelta: {x: 125.1059, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1725718617
@@ -86716,6 +86698,7 @@ GameObject:
   - component: {fileID: 1875624838}
   - component: {fileID: 1875624840}
   - component: {fileID: 1875624839}
+  - component: {fileID: 1875624841}
   m_Layer: 5
   m_Name: SQLite Window
   m_TagString: Untagged
@@ -86787,6 +86770,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875624837}
   m_CullTransparentMesh: 1
+--- !u!114 &1875624841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875624837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f184551922e1da4697763b0c87d4bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManager: {fileID: 1069411207}
+  Loading: {fileID: 1160909650}
+  VictoryScreen: {fileID: 2140126474}
+  FailScreen: {fileID: 320056409}
+  UIInfo: {fileID: 298555734}
 --- !u!1 &1877359417
 GameObject:
   m_ObjectHideFlags: 0
@@ -100172,7 +100172,7 @@ GameObject:
   - component: {fileID: 2140126477}
   - component: {fileID: 2140126476}
   m_Layer: 5
-  m_Name: Success Level 2
+  m_Name: Success Level 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100235,7 +100235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 547a07962cdbe034c96624926ca60b5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 307c24f9fe344794c8eef08a854684c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
