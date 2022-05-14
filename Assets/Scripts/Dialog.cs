@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Dialog : MonoBehaviour
@@ -20,8 +21,7 @@ public class Dialog : MonoBehaviour
             //directionFlag = true ;
         } else
         {
-            b.Play("Base Layer.leanLeft"/*, 0, 1*/);
-            leftDialog.SetActive(true);
+            StartCoroutine(Ex3());
             Desktop.SetActive(false);
         }
     }
@@ -32,7 +32,7 @@ public class Dialog : MonoBehaviour
         {
             StartCoroutine(Example());
             rightDialog.SetActive(false);
-            userInfo.SetActive(true);
+            
         } else
         {
             b.Play("leftToNormal");
@@ -48,10 +48,18 @@ public class Dialog : MonoBehaviour
         rightDialog.SetActive(true);
     }
 
+    IEnumerator Ex3()
+    {
+        b.Play("Base Layer.leanLeft"/*, 0, 1*/);
+        yield return new WaitForSecondsRealtime(1);
+        leftDialog.SetActive(true);
+    }
+
     IEnumerator Example()
     {
         b.Play("rightToNormal");
         yield return new WaitForSecondsRealtime(1);
         Desktop.SetActive(true);
+        userInfo.SetActive(true);
     }
 }

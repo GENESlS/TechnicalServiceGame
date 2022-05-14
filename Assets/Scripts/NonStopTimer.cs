@@ -7,7 +7,7 @@ public class NonStopTimer : MonoBehaviour
     public GameObject indText;
     public bool disableBckgrSound;
     private static float timeLeft = 180;
-    public GameObject failScreen;
+    public GameObject failScreen, a, b, c, d, e, f, g, h;
     GameObject xz;
     AudioManager aa;
     //int flag = 0;
@@ -43,6 +43,8 @@ public class NonStopTimer : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
+            a.SetActive(false); b.SetActive(false); c.SetActive(false); d.SetActive(false); e.SetActive(false);
+            f.SetActive(false); g.SetActive(false); h.SetActive(false);
             failScreen.SetActive(true);
             aa.Play("Fail");
             this.enabled = false;

@@ -4,7 +4,7 @@ using UnityEngine;
 public class CheckCable : MonoBehaviour
 {
     Animator c;
-    public GameObject d, e;
+    public GameObject d, e, f;
 
     private void Start()
     {
@@ -31,6 +31,7 @@ public class CheckCable : MonoBehaviour
         c.Play("rightToNormal");
         yield return new WaitForSecondsRealtime(1);
         d.SetActive(true);
+        f.SetActive(true);
     }
 
     IEnumerator Transition()

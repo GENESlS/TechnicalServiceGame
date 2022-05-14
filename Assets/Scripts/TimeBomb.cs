@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TimeBomb : MonoBehaviour
 {
-    float timeLeft = 5f;
-
+    float timeLeft = 7f;
     private void OnEnable()
     {
-        timeLeft = 5f;
+        timeLeft = 7f;
     }
     void Update()
     {
@@ -17,7 +14,7 @@ public class TimeBomb : MonoBehaviour
         {
             this.gameObject.SetActive(false);
             //timeLeft = 5f;
-           // this.enabled = false;
+            //this.enabled = false;
         } 
     }
 }

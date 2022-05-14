@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckEp2 : MonoBehaviour
 {
-    public GameObject a, b, d, e, f, g;
+    public GameObject GameManager, ResultPage, VictoryScreen, UIInfo, Timer, ChatBubble;
     public Sprite c;
     GameObject x;
     AudioManager y;
@@ -16,20 +16,21 @@ public class CheckEp2 : MonoBehaviour
     }
     public void Checker()
     {
-        if (a.GetComponent<CheckCoding>().Check())
+        if (GameManager.GetComponent<CheckCoding>().Check())
         {
-            b.GetComponent<Image>().sprite = c;
+            ResultPage.GetComponent<Image>().sprite = c;
             StartCoroutine(Asd());
         }
     }
 
     private IEnumerator Asd()
     {
-        e.SetActive(false);
-        f.SetActive(false);
-        g.SetActive(false);
+        GameManager.SetActive(false);
+        UIInfo.SetActive(false);
+        Timer.SetActive(false);
+        ChatBubble.SetActive(false);
         yield return new WaitForSecondsRealtime(3);
-        d.SetActive(true);
+        VictoryScreen.SetActive(true);
         y.StopPlaying("Theme");
         y.Play("Success");
     }
