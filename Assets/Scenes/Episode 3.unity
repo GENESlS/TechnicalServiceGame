@@ -3009,8 +3009,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 156.99998, y: 0.57365}
-  m_SizeDelta: {x: 160.3273, y: 290.42}
+  m_AnchoredPosition: {x: 618.94, y: 0.57365}
+  m_SizeDelta: {x: 622.27, y: 290.42}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &43901820
 MonoBehaviour:
@@ -9725,8 +9725,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000005722046, y: -192}
-  m_SizeDelta: {x: 784.81323, y: 194.0523}
+  m_AnchoredPosition: {x: 233.76991, y: -613.8362}
+  m_SizeDelta: {x: 1252.4, y: 615.8885}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &177075082
 MonoBehaviour:
@@ -14396,8 +14396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -156, y: 0.5744}
-  m_SizeDelta: {x: 160.3273, y: 290.4174}
+  m_AnchoredPosition: {x: -701.2154, y: -98.616}
+  m_SizeDelta: {x: 705.5427, y: 1300.1}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &249908368
 MonoBehaviour:
@@ -16488,8 +16488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100.0209, y: -1635.15}
-  m_SizeDelta: {x: 200.0417, y: 3270.3}
+  m_AnchoredPosition: {x: 100.0209, y: -1369.3936}
+  m_SizeDelta: {x: 200.0417, y: 2738.7869}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272034734
 MonoBehaviour:
@@ -24258,8 +24258,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 445.24216, y: -378.39676}
-  m_SizeDelta: {x: 695.6656, y: 293.5031}
+  m_AnchoredPosition: {x: 424.38, y: -378.39676}
+  m_SizeDelta: {x: 737.39, y: 293.5031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &478291263
 MonoBehaviour:
@@ -25522,8 +25522,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 688.6068, y: 44.386116}
-  m_SizeDelta: {x: 357.2581, y: 205.3533}
+  m_AnchoredPosition: {x: 565.2732, y: 44.386116}
+  m_SizeDelta: {x: 357.2581, y: 452.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501991395
 MonoBehaviour:
@@ -30298,11 +30298,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Google maps script beti\u011Fi : https://maps.googleapis.com/maps/api/js\n\ndocument.getElementById()
-    metodu sayfadaki elementlerin referanslar\u0131n\u0131 \xE7a\u011F\u0131rmay\u0131
-    sa\u011Flar.\n\nJavaScript d\xF6k\xFCman\u0131 i\xE7inde map variable'\u0131n\u0131n
-    tan\u0131mlan\u0131p getid ile html div elementi map-canvas'a atanmas\u0131 gerekiyor,
-    map options konfig\xFCrasyonu da eklenmeli.\n\n\n"
+  m_text: "EXEC - Bir prosed\xFCr\xFC \xE7al\u0131\u015Ft\u0131rmak i\xE7in kullan\u0131l\u0131r.\n\nCREATE
+    DATABASE - Yeni bir SQL veritaban\u0131 olu\u015Fturmak i\xE7in kullan\u0131l\u0131r.\n\nAS
+    - Bir kolonu veya tabloya yeni isim vermek i\xE7in kullan\u0131l\u0131r.\n\nPRIMARY
+    KEY - Bir tablodaki verileri e\u015Fsiz \u015Fekilde tan\u0131mlar.\n\nFROM -
+    Veri se\xE7ilecek ya da silinecek tablonun hangisi oldu\u011Funu belirtmek i\xE7in
+    kullan\u0131l\u0131r. '*' karakteri ile kullan\u0131labilir (SELECT * FROM X)\n\nINSERT
+    INTO - Tabloya yeni sat\u0131rlar eklemek i\xE7in kullan\u0131l\u0131r.\n\nVALUES
+    - ' INSERT INTO ' ifadesinde kullan\u0131lacak de\u011Ferleri belirtmek i\xE7in
+    kullan\u0131l\u0131r.\n\nINNER JOIN - Her iki tabloda da de\u011Feri ayn\u0131
+    olan kay\u0131tlar\u0131 se\xE7mek i\xE7in kullan\u0131l\u0131r.\n\nWHERE - Sonu\xE7
+    dizisinin belirli bir ko\u015Fula g\xF6re filtrelenmesi i\xE7in kullan\u0131l\u0131r.\n\n!!
+    Tarih verilerini almak i\xE7in GETDATE() kullan.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30329,8 +30336,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -52432,8 +52439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -9.0000305}
-  m_SizeDelta: {x: 482.99, y: 459.6128}
+  m_AnchoredPosition: {x: -140, y: 8}
+  m_SizeDelta: {x: 428.7645, y: 459.6128}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1119238252
 MonoBehaviour:
@@ -53212,8 +53219,8 @@ MonoBehaviour:
   m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
-  m_DecelerationRate: 0.33
-  m_ScrollSensitivity: 1
+  m_DecelerationRate: 0
+  m_ScrollSensitivity: 3
   m_Viewport: {fileID: 1310372329}
   m_HorizontalScrollbar: {fileID: 519888043}
   m_VerticalScrollbar: {fileID: 1560217730}
@@ -55232,7 +55239,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283124555
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -55990,8 +55997,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 445.28983, y: 441}
-  m_SizeDelta: {x: 693.59, y: 343.09}
+  m_AnchoredPosition: {x: 423.88565, y: 438.75223}
+  m_SizeDelta: {x: 736.3986, y: 347.5855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203794054
 MonoBehaviour:
@@ -76172,8 +76179,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000005722046, y: 157}
-  m_SizeDelta: {x: 784.81323, y: 158.2318}
+  m_AnchoredPosition: {x: 233.76991, y: 416.6066}
+  m_SizeDelta: {x: 1252.353, y: 417.8383}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1609598499
 MonoBehaviour:
@@ -80291,14 +80298,14 @@ MonoBehaviour:
       - m_Target: {fileID: 2140126476}
         m_TargetAssemblyTypeName: SceneRestart, Assembly-CSharp
         m_MethodName: BacktoMenu
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1725718618
 MonoBehaviour:
@@ -97146,8 +97153,8 @@ RectTransform:
   m_Father: {fileID: 1956809506}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.96885604}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -97347,8 +97354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -335.86, y: -116.72377}
-  m_SizeDelta: {x: 671.72, y: 839.3691}
+  m_AnchoredPosition: {x: -352.40213, y: -116.72377}
+  m_SizeDelta: {x: 638.6357, y: 839.3691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106059522
 MonoBehaviour:
