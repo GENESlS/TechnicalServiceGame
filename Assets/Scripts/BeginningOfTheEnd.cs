@@ -3,7 +3,7 @@ using UnityEngine;
 public class BeginningOfTheEnd : MonoBehaviour
 {
     bool correct;
-    public GameObject G1, G2, G3, G4, Red;
+    public GameObject G1, G2, G3, G4, Red, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12;
 
     int answer;
 
@@ -31,6 +31,11 @@ public class BeginningOfTheEnd : MonoBehaviour
                     G4.SetActive(true);
                     break;
             }
+        
+        E1.SetActive(true); E2.SetActive(true); E3.SetActive(true); E4.SetActive(true); E5.SetActive(true);
+        E6.SetActive(true); E7.SetActive(true); E8.SetActive(true); E9.SetActive(true); E10.SetActive(true);
+        E11.SetActive(true); E12.SetActive(true);
+
         if (correct) 
         {
             y.Play("Success");
