@@ -16,9 +16,18 @@ public class AddressBar : MonoBehaviour
         //Check if the Input Field is in focus and able to alter
         if (m_InputField.isFocused)
         {
+            //Debug.Log("agagas");
             if (Input.GetKeyDown("enter"))
             {
-                if (string.Equals(m_InputField.text,
+                Debug.Log("agagas");
+                CheckBar();
+            }
+        }
+    }
+
+    public void CheckBar()
+    {
+        if (string.Equals(m_InputField.text,
                 "https://www.jobsafety.com/workplace-safety-test/14Apgs35"))
                 {
                     this.enabled = false;
@@ -32,7 +41,5 @@ public class AddressBar : MonoBehaviour
                     currentPage.SetActive(false);
                     emptyPage.SetActive(true);
                 }
-            }
-        }
     }
 }
