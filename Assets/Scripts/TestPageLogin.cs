@@ -22,7 +22,9 @@ public class TestPageLogin : MonoBehaviour
         } 
         else
         { 
-            a.Play("WrongID"); 
+            //a.enabled = true;
+            a.Play("WrongID");
+            //a.enabled = false;
         }
     }
 }
