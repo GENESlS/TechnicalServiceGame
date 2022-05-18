@@ -3,6 +3,17 @@ using UnityEngine;
 public class TimeBombGeneric1 : MonoBehaviour
 {
     public float timeLeft = 3f;
+    float tempTime;
+
+    void OnDisable()
+    {
+        timeLeft = tempTime;
+    }
+
+    void Start()
+    {
+        tempTime = timeLeft;
+    }
 
     void Update()
     {
