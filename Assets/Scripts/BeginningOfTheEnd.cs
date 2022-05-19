@@ -3,7 +3,7 @@ using UnityEngine;
 public class BeginningOfTheEnd : MonoBehaviour
 {
     bool correct;
-    public GameObject G1, G2, G3, G4, Red, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12;
+    public GameObject G1, G2, G3, G4, Red, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, GameManager;
 
     int answer;
 
@@ -43,6 +43,7 @@ public class BeginningOfTheEnd : MonoBehaviour
            // Green.SetActive(true);
             Red.SetActive(true);
             y.Play("Fail");
+            GameManager.GetComponent<HonorPoint>().Decrease(25);
         }
     }
     public void IsCorrectAnswer(bool correct)

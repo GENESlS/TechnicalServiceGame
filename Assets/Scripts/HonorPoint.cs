@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HonorPoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int point = 100;
+    public GameObject pointText, failScreen;
+    Animator aa;
+    TMP_Text tMP_Text;
+    GameObject Empty;
+    AudioManager Manager;
+
+    private void Start()
     {
-        
+        aa = pointText.GetComponent<Animator>();
+        tMP_Text = pointText.GetComponent<TMP_Text>();
+        Empty = GameObject.Find("AudioManager");
+        Manager = Empty.GetComponent<AudioManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        tMP_Text.text = point.ToString();
+        if (point <= 0)
+        {
+            failScreen.SetActive(true);
+            Manager.Play("Fail");
+            this.enabled = false;
+            Manager.StopPlaying("Theme");
+        }
+    }
+
+    public void Decrease(int a)
+    {
+        point -= a;
+        aa.Play("Damage");
     }
 }
