@@ -8,4 +8,10 @@ public class AnimationDisable : MonoBehaviour
         a.SetActive(false);
         b.SetActive(true);
     }
+
+    private void ReverseScript()
+    {
+        a.SetActive(true);
+        b.SetActive(false);
+    }
 }
