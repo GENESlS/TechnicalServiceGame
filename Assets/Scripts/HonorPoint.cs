@@ -9,7 +9,7 @@ public class HonorPoint : MonoBehaviour
     TMP_Text tMP_Text;
     GameObject Empty;
     AudioManager Manager;
-    float time;
+    float second;
 
     private void Start()
     {
@@ -21,15 +21,15 @@ public class HonorPoint : MonoBehaviour
 
     private void Update()
     {
-        time += Time.deltaTime;
+        second += Time.deltaTime;
         tMP_Text.text = point.ToString();
 
         if (Game.activeSelf) 
             {
-                if ((int)time %4 == 0) 
+                if ((int)second %4 == 0) 
                 {
                     Decrease(2);
-                    time++;
+                    second++;
                 }
                 /*do
                     {

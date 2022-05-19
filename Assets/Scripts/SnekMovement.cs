@@ -29,7 +29,9 @@ public class SnekMovement : MonoBehaviour
         }
 
         time += Time.deltaTime;
-        if ((int)time %5 == 0) { a.GetComponent<NonStopTimer>().SettimeLeft(a.GetComponent<NonStopTimer>().GettimeLeft() - 4); time++; } 
+        if ((int)time %5 == 0) { 
+            a.GetComponent<NonStopTimer>().SettimeLeft(a.GetComponent<NonStopTimer>().GettimeLeft() - 4);
+            time++; } 
 
     
     }
