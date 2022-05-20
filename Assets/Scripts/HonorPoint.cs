@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -51,9 +52,19 @@ public class HonorPoint : MonoBehaviour
         }
     }
 
+    public void Delay(int delay)
+    {
+        StartCoroutine(ss(delay));
+    }
     public void Decrease(int a)
     {
         point -= a;
         aa.Play("Damage");
+    }
+
+    IEnumerator ss (int c)
+    {
+        yield return new WaitForSecondsRealtime(c);
+        Decrease(25);
     }
 }
