@@ -35,9 +35,8 @@ public class Dialog : MonoBehaviour
             
         } else
         {
-            b.Play("leftToNormal");
+            StartCoroutine(Example());
             leftDialog.SetActive(false);
-            Desktop.SetActive(true);
         }
     }
 
@@ -58,6 +57,14 @@ public class Dialog : MonoBehaviour
     IEnumerator Example()
     {
         b.Play("rightToNormal");
+        yield return new WaitForSecondsRealtime(1);
+        Desktop.SetActive(true);
+        userInfo.SetActive(true);
+    }
+
+    IEnumerator Example2()
+    {
+        b.Play("leftToNormal");
         yield return new WaitForSecondsRealtime(1);
         Desktop.SetActive(true);
         userInfo.SetActive(true);
