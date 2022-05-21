@@ -35,7 +35,7 @@ public class Dialog : MonoBehaviour
             
         } else
         {
-            StartCoroutine(Example());
+            StartCoroutine(Example2());
             leftDialog.SetActive(false);
         }
     }
