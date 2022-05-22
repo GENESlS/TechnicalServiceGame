@@ -6,6 +6,8 @@ public class AddressBar : MonoBehaviour
     TMP_InputField m_InputField;
     string inputText;
     public GameObject currentPage, targetPage, emptyPage, emptyPageContext;
+
+    public string Link;
     void Start()
     {
         //Fetch the Input Field component from the GameObject
@@ -18,7 +20,7 @@ public class AddressBar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
             {
                 //Debug.Log("agagas");
-                CheckBar();
+                CheckBar(Link);
             }
     }
 
@@ -69,11 +71,10 @@ public class AddressBar : MonoBehaviour
         m_InputField.onValueChanged.RemoveAllListeners();
     } */
 
-    public void CheckBar()
+    public void CheckBar(string link)
     {
         m_InputField.text = "";
-        if (string.Equals(inputText,
-                "https://www.jobsafety.com/workplace-safety-test/14Apgs35"))
+        if (string.Equals(inputText, link))
                 {
                     this.gameObject.SetActive(false);
                     currentPage.SetActive(false);
