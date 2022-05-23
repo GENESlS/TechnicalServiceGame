@@ -5,9 +5,8 @@ public class AddressBar : MonoBehaviour
 {
     TMP_InputField m_InputField;
     string inputText;
-    public GameObject currentPage, targetPage, emptyPage, emptyPageContext;
-
-    public string Link;
+    public GameObject pages, SearchEngineHomePage, G4AcademyPage, emptyPage, emptyPageContext;
+    GameObject currentPage;
     void Start()
     {
         //Fetch the Input Field component from the GameObject
@@ -20,7 +19,7 @@ public class AddressBar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
             {
                 //Debug.Log("agagas");
-                CheckBar(Link);
+                CheckBar();
             }
     }
 
@@ -71,15 +70,56 @@ public class AddressBar : MonoBehaviour
         m_InputField.onValueChanged.RemoveAllListeners();
     } */
 
-    public void CheckBar(string link)
+    public void CheckBar()
     {
         m_InputField.text = "";
-        if (string.Equals(inputText, link))
+        FindCurrent();
+        if (string.Equals(inputText, "https://www.neoxin.com"))
                 {
                     this.gameObject.SetActive(false);
                     currentPage.SetActive(false);
-                    targetPage.SetActive(true);
-                } 
+                    SearchEngineHomePage.SetActive(true);
+                } else if (string.Equals(inputText, "https://www.g4academy.com") || 
+                           string.Equals(inputText, "https://www.g4academy.com/python"))
+                {
+                    for (int t = 0; t < G4AcademyPage.transform.childCount; t++)
+                    {
+                        G4AcademyPage.transform.GetChild(t).gameObject.SetActive(false);
+                    }
+                    this.gameObject.SetActive(false);
+                    currentPage.SetActive(false);
+                    G4AcademyPage.SetActive(true);
+                } else if (string.Equals(inputText, "https://www.g4academy.com/python/pass-generate-sample"))
+                {
+                    for (int t = 0; t < G4AcademyPage.transform.childCount; t++)
+                    {
+                        G4AcademyPage.transform.GetChild(t).gameObject.SetActive(false);
+                    }
+                    this.gameObject.SetActive(false);
+                    currentPage.SetActive(false);
+                    G4AcademyPage.SetActive(true);
+                    G4AcademyPage.transform.GetChild(0).gameObject.SetActive(true);
+                } else if (string.Equals(inputText, "https://www.g4academy.com/python/initialize-window"))
+                {
+                    for (int t = 0; t < G4AcademyPage.transform.childCount; t++)
+                    {
+                        G4AcademyPage.transform.GetChild(t).gameObject.SetActive(false);
+                    }
+                    this.gameObject.SetActive(false);
+                    currentPage.SetActive(false);
+                    G4AcademyPage.SetActive(true);
+                    G4AcademyPage.transform.GetChild(1).gameObject.SetActive(true);
+                } else if (string.Equals(inputText, "https://www.g4academy.com/python/headings/ex"))
+                {
+                    for (int t = 0; t < G4AcademyPage.transform.childCount; t++)
+                    {
+                        G4AcademyPage.transform.GetChild(t).gameObject.SetActive(false);
+                    }
+                    this.gameObject.SetActive(false);
+                    currentPage.SetActive(false);
+                    G4AcademyPage.SetActive(true);
+                    G4AcademyPage.transform.GetChild(2).gameObject.SetActive(true);
+                }
                 else 
                 {
                     emptyPageContext.GetComponent<TMP_Text>().text = "<b>" + inputText + "</b> " +
@@ -89,6 +129,15 @@ public class AddressBar : MonoBehaviour
                     currentPage.SetActive(false);
                     emptyPage.SetActive(true);
                 }
+    }
+
+    public void FindCurrent()
+    {
+        for (int i = 0; i < pages.transform.childCount; i++)
+        {
+            if (pages.transform.GetChild(i).gameObject.activeSelf) 
+                currentPage = pages.transform.GetChild(i).gameObject;
+        }
     }
     /* void OnValueChange(string text)
     {

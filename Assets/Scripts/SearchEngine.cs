@@ -5,7 +5,9 @@ public class SearchEngine : MonoBehaviour
 {
     TMP_InputField m_InputField;
     string inputText;
-    public GameObject currentPage, targetPage1, targetPage2, targetPage3, emptyPage, emptyPageContext;
+    public GameObject searchPages, targetPage1, targetPage2, targetPage3, emptySearch, emptySearchContext;
+    GameObject currentSearch;
+
 
     void Start()
     {
@@ -32,26 +34,36 @@ public class SearchEngine : MonoBehaviour
     public void CheckSearchBar()
     {
         m_InputField.text = "";
+        FindCurrentSearch();
         if (string.Equals(inputText, "python password generator", System.StringComparison.CurrentCultureIgnoreCase))
                 {
                     this.gameObject.SetActive(false);
-                    currentPage.SetActive(false);
+                    currentSearch.SetActive(false);
                     targetPage1.SetActive(true);
                 } else if (string.Equals(inputText, "python tkinter", System.StringComparison.CurrentCultureIgnoreCase)) {
                     this.gameObject.SetActive(false);
-                    currentPage.SetActive(false);
+                    currentSearch.SetActive(false);
                     targetPage2.SetActive(true);
                 } else if (string.Equals(inputText, "python pyperclip", System.StringComparison.CurrentCultureIgnoreCase)) {
                     this.gameObject.SetActive(false);
-                    currentPage.SetActive(false);
+                    currentSearch.SetActive(false);
                     targetPage3.SetActive(true);
                 } else 
                 { 
-                    emptyPageContext.GetComponent<TMP_Text>().text = "Aradığınız - <b>" + inputText + "</b> - " +
+                    emptySearchContext.GetComponent<TMP_Text>().text = "Aradığınız - <b>" + inputText + "</b> - " +
                                                                      "ile ilgili hiçbir arama sonucu " + 
                                                                      "mevcut değil.";
-                    currentPage.SetActive(false);
-                    emptyPage.SetActive(true);
+                    currentSearch.SetActive(false);
+                    emptySearch.SetActive(true);
                 }
+    }
+
+    public void FindCurrentSearch()
+    {
+        for (int i = 0; i < searchPages.transform.childCount; i++)
+        {
+            if (searchPages.transform.GetChild(i).gameObject.activeSelf) 
+                currentSearch = searchPages.transform.GetChild(i).gameObject;
+        }
     }
 }
