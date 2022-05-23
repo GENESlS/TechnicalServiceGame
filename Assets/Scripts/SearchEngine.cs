@@ -37,11 +37,16 @@ public class SearchEngine : MonoBehaviour
                     this.gameObject.SetActive(false);
                     currentPage.SetActive(false);
                     targetPage1.SetActive(true);
-                } else if (string.Equals(inputText, "python password generator", System.StringComparison.CurrentCultureIgnoreCase)) {
-
-                } 
-                else 
-                {
+                } else if (string.Equals(inputText, "python tkinter", System.StringComparison.CurrentCultureIgnoreCase)) {
+                    this.gameObject.SetActive(false);
+                    currentPage.SetActive(false);
+                    targetPage2.SetActive(true);
+                } else if (string.Equals(inputText, "python pyperclip", System.StringComparison.CurrentCultureIgnoreCase)) {
+                    this.gameObject.SetActive(false);
+                    currentPage.SetActive(false);
+                    targetPage3.SetActive(true);
+                } else 
+                { 
                     emptyPageContext.GetComponent<TMP_Text>().text = "<b>" + inputText + "</b> " +
                                                                      "adresindeki sayfa geçici olarak " + 
                                                                      "kullanım dışı veya kalıcı olarak " +
