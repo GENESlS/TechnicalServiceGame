@@ -47,10 +47,9 @@ public class SearchEngine : MonoBehaviour
                     targetPage3.SetActive(true);
                 } else 
                 { 
-                    emptyPageContext.GetComponent<TMP_Text>().text = "<b>" + inputText + "</b> " +
-                                                                     "adresindeki sayfa geçici olarak " + 
-                                                                     "kullanım dışı veya kalıcı olarak " +
-                                                                     "yeni bir adrese taşınmış olabilir.";
+                    emptyPageContext.GetComponent<TMP_Text>().text = "Aradığınız - <b>" + inputText + "</b> - " +
+                                                                     "ile ilgili hiçbir arama sonucu " + 
+                                                                     "mevcut değil.";
                     currentPage.SetActive(false);
                     emptyPage.SetActive(true);
                 }
