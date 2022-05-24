@@ -5,7 +5,7 @@ public class AddressBar : MonoBehaviour
 {
     TMP_InputField m_InputField;
     string inputText;
-    public GameObject pages, SearchEngineHomePage, G4AcademyPage, emptyPage, emptyPageContext;
+    public GameObject pages, SearchEngine, G4AcademyPage, emptyPage, emptyPageContext;
     GameObject currentPage;
     void Start()
     {
@@ -76,9 +76,16 @@ public class AddressBar : MonoBehaviour
         FindCurrent();
         if (string.Equals(inputText, "https://www.neoxin.com"))
                 {
-                    this.gameObject.SetActive(false);
+                    for (int t = 0; t < SearchEngine.transform.childCount; t++)
+                    {
+                        SearchEngine.transform.GetChild(t).gameObject.SetActive(false);
+                    }
+                    //Debug.Log("Done");
+                    //this.gameObject.SetActive(false);
                     currentPage.SetActive(false);
-                    SearchEngineHomePage.SetActive(true);
+                    SearchEngine.SetActive(true);
+                    SearchEngine.transform.GetChild(0).gameObject.SetActive(true);
+                    //Debug.Log("Done2");
                 } else if (string.Equals(inputText, "https://www.g4academy.com") || 
                            string.Equals(inputText, "https://www.g4academy.com/python"))
                 {
@@ -86,7 +93,7 @@ public class AddressBar : MonoBehaviour
                     {
                         G4AcademyPage.transform.GetChild(t).gameObject.SetActive(false);
                     }
-                    this.gameObject.SetActive(false);
+                    //this.gameObject.SetActive(false);
                     currentPage.SetActive(false);
                     G4AcademyPage.SetActive(true);
                 } else if (string.Equals(inputText, "https://www.g4academy.com/python/pass-generate-sample"))
@@ -95,7 +102,7 @@ public class AddressBar : MonoBehaviour
                     {
                         G4AcademyPage.transform.GetChild(t).gameObject.SetActive(false);
                     }
-                    this.gameObject.SetActive(false);
+                    //this.gameObject.SetActive(false);
                     currentPage.SetActive(false);
                     G4AcademyPage.SetActive(true);
                     G4AcademyPage.transform.GetChild(0).gameObject.SetActive(true);
@@ -105,7 +112,7 @@ public class AddressBar : MonoBehaviour
                     {
                         G4AcademyPage.transform.GetChild(t).gameObject.SetActive(false);
                     }
-                    this.gameObject.SetActive(false);
+                    //this.gameObject.SetActive(false);
                     currentPage.SetActive(false);
                     G4AcademyPage.SetActive(true);
                     G4AcademyPage.transform.GetChild(1).gameObject.SetActive(true);
@@ -115,7 +122,7 @@ public class AddressBar : MonoBehaviour
                     {
                         G4AcademyPage.transform.GetChild(t).gameObject.SetActive(false);
                     }
-                    this.gameObject.SetActive(false);
+                    //this.gameObject.SetActive(false);
                     currentPage.SetActive(false);
                     G4AcademyPage.SetActive(true);
                     G4AcademyPage.transform.GetChild(2).gameObject.SetActive(true);

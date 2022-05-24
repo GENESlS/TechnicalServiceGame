@@ -37,15 +37,15 @@ public class SearchEngine : MonoBehaviour
         FindCurrentSearch();
         if (string.Equals(inputText, "python password generator", System.StringComparison.CurrentCultureIgnoreCase))
                 {
-                    this.gameObject.SetActive(false);
+                    //this.gameObject.SetActive(false);
                     currentSearch.SetActive(false);
                     targetPage1.SetActive(true);
                 } else if (string.Equals(inputText, "python tkinter", System.StringComparison.CurrentCultureIgnoreCase)) {
-                    this.gameObject.SetActive(false);
+                    //this.gameObject.SetActive(false);
                     currentSearch.SetActive(false);
                     targetPage2.SetActive(true);
                 } else if (string.Equals(inputText, "python pyperclip", System.StringComparison.CurrentCultureIgnoreCase)) {
-                    this.gameObject.SetActive(false);
+                    //this.gameObject.SetActive(false);
                     currentSearch.SetActive(false);
                     targetPage3.SetActive(true);
                 } else 
