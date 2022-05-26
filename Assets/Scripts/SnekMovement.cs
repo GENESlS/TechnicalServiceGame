@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class SnekMovement : MonoBehaviour
@@ -29,8 +30,9 @@ public class SnekMovement : MonoBehaviour
         }
 
         time += Time.deltaTime;
-        if ((int)time %5 == 0) { 
+        if ((int)time %5 == 0 && SceneManager.GetActiveScene().buildIndex != 10) { 
             a.GetComponent<NonStopTimer>().SettimeLeft(a.GetComponent<NonStopTimer>().GettimeLeft() - 4);
+            //Debug.Log(a.GetComponent<NonStopTimer>().GettimeLeft());
             time++; } 
 
     
