@@ -28,7 +28,7 @@ public class AdressBarEp4 : MonoBehaviour
     {
         m_InputField.text = "";
         FindCurrent();
-        Debug.Log(inputText);
+        //Debug.Log(inputText);
         //if ((string.Equals(inputText.Trim(), "https://www.jobsafety.com/workplace-safety-test/14Apgs35​"))) 
           if ((string.Equals(inputText.Trim(), "https://www.jobsafety.com/workplace-safety-test/14Apgs35")))      
                 {
