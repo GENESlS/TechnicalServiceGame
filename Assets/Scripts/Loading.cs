@@ -1,3 +1,4 @@
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Loading : MonoBehaviour
@@ -19,6 +20,7 @@ public class Loading : MonoBehaviour
             this.gameObject.SetActive(false);
             a.SetActive(true);
             b.SetActive(true);
+            //b.GetComponent<Button>().enabled = true;
         } 
     }
 }
