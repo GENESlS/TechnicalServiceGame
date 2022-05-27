@@ -11,8 +11,6 @@ public class SnekMovement : MonoBehaviour
     private float time = 1;
     public GameObject a;
 
-    bool flag = false;
-
     //public int initialSize = 4;
     private void OnEnable()
     {
@@ -32,14 +30,13 @@ public class SnekMovement : MonoBehaviour
         }
 
         time += Time.deltaTime;
-        if (SceneManager.GetActiveScene().buildIndex != 8 || SceneManager.GetActiveScene().buildIndex != 10) 
-            flag = true; 
-        
-        if ((int)time %5 == 0 && flag) {
+        if (SceneManager.GetActiveScene().buildIndex != 8 || SceneManager.GetActiveScene().buildIndex != 10)
+        {
+            if ((int)time %5 == 0) {
             a.GetComponent<NonStopTimer>().SettimeLeft(a.GetComponent<NonStopTimer>().GettimeLeft() - 4);
             //Debug.Log(a.GetComponent<NonStopTimer>().GettimeLeft());
             time++; }
-    
+        } 
     }
 
     private void FixedUpdate(){
