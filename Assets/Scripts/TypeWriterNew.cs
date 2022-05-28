@@ -95,9 +95,9 @@ public class TypeWriterNew : MonoBehaviour
 		while (true)
 		{
 			_tmpProText.maxVisibleCharacters = _tmpProText.text.Length - 1;
-			yield return new WaitForSecondsRealtime(1);
+			yield return new WaitForSeconds(1);
 			_tmpProText.maxVisibleCharacters = _tmpProText.text.Length;
-			yield return new WaitForSecondsRealtime(1);
+			yield return new WaitForSeconds(1);
 		}
 		
 		/*

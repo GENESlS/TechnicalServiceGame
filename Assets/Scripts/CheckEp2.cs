@@ -29,7 +29,7 @@ public class CheckEp2 : MonoBehaviour
         UIInfo.SetActive(false);
         Timer.SetActive(false);
         ChatBubble.SetActive(false);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSeconds(3);
         VictoryScreen.SetActive(true);
         y.StopPlaying("Theme");
         y.Play("Success");

@@ -92,6 +92,16 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");   
             return;
         }
+
+        
+
+        if (PauseMenu.GameIsPaused)
+        {
+            s.source.volume = 0;
+        } else {
+            s.source.volume = 0.802f;
+        }
+
         s.source.Play();
     }
 

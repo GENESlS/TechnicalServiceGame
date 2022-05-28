@@ -43,21 +43,21 @@ public class Dialog : MonoBehaviour
     IEnumerator Ex2()
     {
         b.Play("Base Layer.leanRight"/*, 0, 1*/);
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         rightDialog.SetActive(true);
     }
 
     IEnumerator Ex3()
     {
         b.Play("Base Layer.leanLeft"/*, 0, 1*/);
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         leftDialog.SetActive(true);
     }
 
     IEnumerator Example()
     {
         b.Play("rightToNormal");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         Desktop.SetActive(true);
         userInfo.SetActive(true);
     }
@@ -65,7 +65,7 @@ public class Dialog : MonoBehaviour
     IEnumerator Example2()
     {
         b.Play("leftToNormal");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         Desktop.SetActive(true);
         userInfo.SetActive(true);
     }

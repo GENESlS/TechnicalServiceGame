@@ -64,7 +64,7 @@ public class HonorPoint : MonoBehaviour
 
     IEnumerator ss (int c)
     {
-        yield return new WaitForSecondsRealtime(c);
+        yield return new WaitForSeconds(c);
         Decrease(25);
     }
 }

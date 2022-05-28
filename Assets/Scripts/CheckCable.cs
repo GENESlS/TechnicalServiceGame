@@ -29,7 +29,7 @@ public class CheckCable : MonoBehaviour
     IEnumerator TransitionBack()
     {
         c.Play("rightToNormal");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         d.SetActive(true);
         f.SetActive(true);
     }
@@ -37,7 +37,7 @@ public class CheckCable : MonoBehaviour
     IEnumerator Transition()
     {
         c.Play("leanRight");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         e.SetActive(true);
     }
 }
