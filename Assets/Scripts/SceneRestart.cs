@@ -16,11 +16,14 @@ public class SceneRestart : MonoBehaviour
 
     public void NextScene()
     {
-        if (level < (SceneManager.GetActiveScene().buildIndex + 2) / 2 && PlayerPrefs.HasKey("name")) 
+        if (level != 5)
+        {
+            if (level < (SceneManager.GetActiveScene().buildIndex + 2) / 2 && PlayerPrefs.HasKey("name")) 
             {
                 PlayerPrefs.SetInt("level", (SceneManager.GetActiveScene().buildIndex + 2) / 2);
                 PlayerPrefs.Save();
             }
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

@@ -78082,6 +78082,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4836366348466845309, guid: 6b01dd774b35d9247838569e3ef65218, type: 3}
+      propertyPath: sounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836366348466845309, guid: 6b01dd774b35d9247838569e3ef65218, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5931b243f84b3fb45afd0f689806f1a6, type: 3}
+    - target: {fileID: 4836366348466845309, guid: 6b01dd774b35d9247838569e3ef65218, type: 3}
+      propertyPath: sounds.Array.data[6].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836366348466845309, guid: 6b01dd774b35d9247838569e3ef65218, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: Ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836366348466845309, guid: 6b01dd774b35d9247838569e3ef65218, type: 3}
+      propertyPath: sounds.Array.data[6].group
+      value: 
+      objectReference: {fileID: 24300002, guid: c006fb8a396c96e4ca81b0cb994b8247, type: 2}
+    - target: {fileID: 4836366348466845309, guid: 6b01dd774b35d9247838569e3ef65218, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836366348466845309, guid: 6b01dd774b35d9247838569e3ef65218, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.802
+      objectReference: {fileID: 0}
     - target: {fileID: 4836366348466845310, guid: 6b01dd774b35d9247838569e3ef65218, type: 3}
       propertyPath: m_Name
       value: AudioManager

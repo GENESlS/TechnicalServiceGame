@@ -59,6 +59,9 @@ public class AudioManager : MonoBehaviour
                 case string scenery when scenery.Contains("Episode"):
                     Play("Theme");
                     break;
+                case string scenery when scenery.Equals("Credits"):
+                    Play("Ending");
+                    break;
             }
             sceneChange = 1;
         }
