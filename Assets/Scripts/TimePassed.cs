@@ -9,6 +9,9 @@ public class TimePassed : MonoBehaviour
         this.gameObject.SetActive(false);
         a.GetComponent<Dialog>().Normalize(true);
         //c.SetActive(true);        
-        b.GetComponent<NonStopTimer>().SettimeLeft(b.GetComponent<NonStopTimer>().GettimeLeft() - 60);
+        if (b.activeSelf)
+        {
+            b.GetComponent<NonStopTimer>().SettimeLeft(b.GetComponent<NonStopTimer>().GettimeLeft() - 60);
+        }
     }
 }

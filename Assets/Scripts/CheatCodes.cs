@@ -12,6 +12,7 @@ public class CheatCodes : MonoBehaviour
     public void Cheating()
     {
         CodeText = CheatCode.GetComponent<TMP_Text>().text;
+        CheatCode.GetComponent<TMP_Text>().text = "";
 
         if (CodeText == "259753")
         {
