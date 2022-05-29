@@ -33,10 +33,10 @@ public class ArrivedToPC : MonoBehaviour
         ActionCamera.SetActive(true);
         //Debug.Log("2");
         a.Play("sitting");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         //Debug.Log("3");
         a.Play("sitIdle");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         a.speed = 0;
         this.gameObject.SetActive(false);
     }

@@ -35,7 +35,7 @@ public class P2Score : MonoBehaviour
     IEnumerator LR()
     {
         dn = true;
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSeconds(5);
         b.SetActive(true);
         p.Play("Success");
     }

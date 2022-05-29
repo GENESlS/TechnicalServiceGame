@@ -30,7 +30,7 @@ public class CheckEp3 : MonoBehaviour
         GameManager.SetActive(false);
         //Timer.SetActive(false);
         //ChatBubble.SetActive(false);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSeconds(3);
         UIInfo.SetActive(false);
         VictoryScreen.SetActive(true);
         y.StopPlaying("Theme");
@@ -40,7 +40,7 @@ public class CheckEp3 : MonoBehaviour
     private IEnumerator Asd2()
     {
         Loading.SetActive(true);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSeconds(3);
         FailScreen.SetActive(true);
     }
 }

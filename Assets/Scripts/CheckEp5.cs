@@ -118,7 +118,7 @@ root\.mainloop\(\)";
     {
         GameManager.SetActive(false);
         appWindow.SetActive(true);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSeconds(3);
         UIInfo.SetActive(false);
         VictoryScreen.SetActive(true);
         y.StopPlaying("Theme");
@@ -129,7 +129,7 @@ root\.mainloop\(\)";
     private IEnumerator Fail()
     {
         Loading.SetActive(true);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSeconds(3);
         FailScreen.SetActive(true);
     }
 }

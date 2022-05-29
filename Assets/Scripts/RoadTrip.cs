@@ -64,19 +64,19 @@ public class RoadTrip : MonoBehaviour
         MainCamera.SetActive(true);
         a.Play("standUp");
         //Debug.Log("Standing Up !!");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         a.Play("headLeft");
         yield return new WaitForSeconds(1.5f);
         //this.GetComponent<Transform>().Rotate(0, -90, 0);
         a.Play("walk 1");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         a.Play("headRight");
         yield return new WaitForSeconds(1.5f);
         //this.GetComponent<Transform>().Rotate(0, 90,0);
         a.Play("walk 2");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         a.Play("walk 2_1");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         a.Play("headRight");
         yield return new WaitForSeconds(1.5f);
         //this.GetComponent<Transform>().Rotate(0, 90,0);
@@ -86,7 +86,7 @@ public class RoadTrip : MonoBehaviour
     IEnumerator Ani2()
     {
         a.Play("idle");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         MainCamera.SetActive(false);
         BossCam.SetActive(true);
         entrance = this.transform.localPosition;
@@ -99,9 +99,9 @@ public class RoadTrip : MonoBehaviour
         a.Play("headLeft");
         yield return new WaitForSeconds(1.5f);
         a.Play("walk 4");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         a.Play("walk 5");
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(1);
         a.Play("headLeft");
         yield return new WaitForSeconds(1.5f);
         EmptyObject.SetActive(true);
@@ -111,7 +111,7 @@ public class RoadTrip : MonoBehaviour
     IEnumerator Ani4()
     {
         EmptyObject.SetActive(false);
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSeconds(2);
         Boss.SetActive(false);
         this.transform.localPosition = entrance;
         this.transform.Rotate(0, -90, 0);

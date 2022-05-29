@@ -42,7 +42,7 @@ public class DesktopScore : MonoBehaviour
     IEnumerator LateReaction()
     {
         done = true;
-        yield return new WaitForSecondsRealtime(6);
+        yield return new WaitForSeconds(6);
         b.SetActive(true);
         y.Play("Success");
     }
@@ -50,7 +50,7 @@ public class DesktopScore : MonoBehaviour
     IEnumerator Later()
     {
         sdfasd = 1;
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSeconds(5);
         e.SetActive(true);
         y.Play("Success");
     }
