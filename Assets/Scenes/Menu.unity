@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372c15efb0016b645b52d9cf7997e22e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheatCode: {fileID: 1899845929}
+  CheatCode: {fileID: 1198471660}
   NoTimeButton: {fileID: 2134647826}
 --- !u!1 &444179624
 GameObject:
