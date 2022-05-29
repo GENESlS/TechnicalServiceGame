@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CheatCodes : MonoBehaviour
 {
+    public static bool NoTimer = false;
     public GameObject CheatCode, NoTimeButton;
     private string CodeText;
 
@@ -27,5 +29,13 @@ public class CheatCodes : MonoBehaviour
         {
             NoTimeButton.SetActive(true);
         }
+    }
+
+    public void NoTimeIsOn()
+    {
+        if (NoTimeButton.GetComponent<Toggle>().isOn)
+            NoTimer = true;
+        else 
+            NoTimer = false;
     }
 }
