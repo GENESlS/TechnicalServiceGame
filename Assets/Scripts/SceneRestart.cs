@@ -18,7 +18,7 @@ public class SceneRestart : MonoBehaviour
     {
         if (level != 5)
         {
-            if (level < (SceneManager.GetActiveScene().buildIndex + 2) / 2 && PlayerPrefs.HasKey("name")) 
+            if (level == (SceneManager.GetActiveScene().buildIndex / 2) && PlayerPrefs.HasKey("name")) 
             {
                 PlayerPrefs.SetInt("level", (SceneManager.GetActiveScene().buildIndex + 2) / 2);
                 PlayerPrefs.Save();
@@ -31,7 +31,7 @@ public class SceneRestart : MonoBehaviour
     {
         if (levelComplete) 
         {
-            if (level < (SceneManager.GetActiveScene().buildIndex + 2) / 2 && PlayerPrefs.HasKey("name")) 
+            if (level == (SceneManager.GetActiveScene().buildIndex / 2) && PlayerPrefs.HasKey("name")) 
             {
                 PlayerPrefs.SetInt("level", (SceneManager.GetActiveScene().buildIndex + 2) / 2);
                 PlayerPrefs.Save();

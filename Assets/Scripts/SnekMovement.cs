@@ -38,10 +38,13 @@ public class SnekMovement : MonoBehaviour
         time += Time.deltaTime;
         if (activeScene != 8 && activeScene != 10)
         {
-            if ((int)time %5 == 0) {
-            a.GetComponent<NonStopTimer>().SettimeLeft(a.GetComponent<NonStopTimer>().GettimeLeft() - 4);
-            //Debug.Log(a.GetComponent<NonStopTimer>().GettimeLeft());
-            time++; }
+            if (a.GetComponent<NonStopTimer>().enabled)
+            {
+                if ((int)time %5 == 0) {
+                a.GetComponent<NonStopTimer>().SettimeLeft(a.GetComponent<NonStopTimer>().GettimeLeft() - 4);
+                //Debug.Log(a.GetComponent<NonStopTimer>().GettimeLeft());
+                time++; }
+            }
         } 
     }
 
