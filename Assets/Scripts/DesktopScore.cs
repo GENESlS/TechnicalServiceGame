@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DesktopScore : MonoBehaviour
 {
-    public GameObject a, b, c, d, e, f;
+    public GameObject a, b, c, d, e, f, timerP2;
     GameObject x;
     AudioManager y;
     bool done = false, done2 = false;
@@ -53,6 +53,8 @@ public class DesktopScore : MonoBehaviour
         yield return new WaitForSeconds(5);
         e.SetActive(true);
         y.Play("Success");
+        if (!CheatCodes.NoTimer) 
+            timerP2.SetActive(true);
     }
 
     /* public void tc2()

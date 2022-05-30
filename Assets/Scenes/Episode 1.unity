@@ -4788,6 +4788,7 @@ GameObject:
   - component: {fileID: 134961560}
   - component: {fileID: 134961559}
   - component: {fileID: 134961558}
+  - component: {fileID: 134961563}
   m_Layer: 5
   m_Name: Search
   m_TagString: Untagged
@@ -5014,6 +5015,19 @@ RectTransform:
   m_AnchoredPosition: {x: -77.791824, y: -104.6067}
   m_SizeDelta: {x: 97.1694, y: 16.9824}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &134961563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134961557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbffa11b05f0154aa547cacbbde1c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Star: {fileID: 1148755260}
 --- !u!1 &135281691
 GameObject:
   m_ObjectHideFlags: 0
@@ -48059,6 +48073,7 @@ MonoBehaviour:
   d: {fileID: 18407224}
   e: {fileID: 1433841246}
   f: {fileID: 1342259940}
+  timerP2: {fileID: 1881686244}
   sdfasd: 0
 --- !u!1 &1071475998
 GameObject:
@@ -80505,7 +80520,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882738354}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf9fa0690172574f8395d5c2d8ce375, type: 3}
   m_Name: 
@@ -80513,6 +80528,8 @@ MonoBehaviour:
   a: {fileID: 1798638930}
   d: {fileID: 984533577}
   e: {fileID: 2046389678}
+  cmdInput: {fileID: 172459776}
+  SearchBox: {fileID: 1148755260}
   b: {fileID: 21300000, guid: 43402c5afab33ea4ba2eefc4060d9d77, type: 3}
   c: {fileID: 21300000, guid: 0d93900e298d34d48abd458a6635abac, type: 3}
 --- !u!114 &1882738356
@@ -91848,7 +91865,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115774073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf9fa0690172574f8395d5c2d8ce375, type: 3}
   m_Name: 
@@ -91856,6 +91873,8 @@ MonoBehaviour:
   a: {fileID: 517686285}
   d: {fileID: 1795189645}
   e: {fileID: 1295677967}
+  cmdInput: {fileID: 1648428126}
+  SearchBox: {fileID: 93952715}
   b: {fileID: 21300000, guid: 43402c5afab33ea4ba2eefc4060d9d77, type: 3}
   c: {fileID: 21300000, guid: a03d045a251e12b4ea8b76347bda2ad1, type: 3}
 --- !u!114 &2115774079
@@ -91878,7 +91897,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115774073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b818871fac6fb0d4fa72afbae79726ab, type: 3}
   m_Name: 

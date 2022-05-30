@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class changeBackground : MonoBehaviour
 {
-    public GameObject a, d, e;
+    public GameObject a, d, e, cmdInput, SearchBox;
     public Sprite b, c;
+
+    bool flag = false;
     public void Change()
     {
         //c = a.GetComponent<Image>().sprite;
@@ -18,13 +20,14 @@ public class changeBackground : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && flag == false)
         {
             this.gameObject.GetComponent<Test2>().FrontPage();
             d.SetActive(true);
-            GameObject.Find("cmdInput").GetComponent<TMP_InputField>().ActivateInputField();
-            GameObject.Find("SearchBox").SetActive(false);
+            cmdInput.GetComponent<TMP_InputField>().ActivateInputField();
+            SearchBox.SetActive(false);
             e.SetActive(true);
+            flag = true;
         }
     }
 }
