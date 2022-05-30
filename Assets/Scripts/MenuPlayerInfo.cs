@@ -26,6 +26,7 @@ public class MenuPlayerInfo : MonoBehaviour
     public void DeleteProfile()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
         this.gameObject.SetActive(false);
     }
 

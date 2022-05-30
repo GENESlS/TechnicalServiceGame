@@ -35,10 +35,10 @@ public class searchBox : MonoBehaviour
     public void search()
     {
         m_InputField.text = "";
+        m_InputField.DeactivateInputField();
         //FindCurrent();
         if (string.Equals(inputText, "cmd", System.StringComparison.CurrentCultureIgnoreCase))
             {
-                m_InputField.DeactivateInputField();
                 b.GetComponent<Image>().sprite = cmdSearch;
                 b.GetComponent<Transform>().GetChild(0).gameObject.SetActive(true);
                 b.GetComponent<Transform>().GetChild(1).gameObject.SetActive(true);
@@ -48,7 +48,7 @@ public class searchBox : MonoBehaviour
             }
         else 
         {
-            m_InputField.DeactivateInputField();
+            //m_InputField.DeactivateInputField();
             b.GetComponent<Image>().sprite = EmptySearch;
             b.GetComponent<Transform>().GetChild(0).gameObject.SetActive(false);
             b.GetComponent<Transform>().GetChild(1).gameObject.SetActive(false);

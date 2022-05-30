@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class changeBackground : MonoBehaviour
 {
-    public GameObject a, d, e, cmdInput, SearchBox;
+    public GameObject a, d, e, cmdInput;
     public Sprite b, c;
 
-    bool flag = false;
+    //bool flag = false;
     public void Change()
     {
         //c = a.GetComponent<Image>().sprite;
@@ -18,16 +18,25 @@ public class changeBackground : MonoBehaviour
         a.GetComponent<Image>().sprite = c;
     }
 
+    /*
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && flag == false)
+        if (Input.GetKeyDown(KeyCode.Return) /*&& flag == false)
         {
-            this.gameObject.GetComponent<Test2>().FrontPage();
-            d.SetActive(true);
-            cmdInput.GetComponent<TMP_InputField>().ActivateInputField();
-            SearchBox.SetActive(false);
-            e.SetActive(true);
-            flag = true;
+            Debug.Log("aa");
+            OpenKeyPress();
+            //gameObject.SetActive(false);
+            //flag = true;
         }
     }
+
+    void OpenKeyPress()
+    {
+        this.gameObject.GetComponent<Test>().FrontPage();
+        d.SetActive(true);
+        cmdInput.GetComponent<TMP_InputField>().ActivateInputField();
+        //SearchBox.SetActive(false);
+        e.SetActive(true);
+        gameObject.SetActive(false);
+    } */
 }

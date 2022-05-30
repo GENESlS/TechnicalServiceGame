@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 1d9c3ddeb1d19494c97b62aedf0a1118, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2447,8 +2447,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 223534448}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2459,8 +2459,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 600493893}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -31932,8 +31932,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -352, y: -93}
-  m_SizeDelta: {x: 134.0334, y: 50}
+  m_AnchoredPosition: {x: -363.3417, y: -93}
+  m_SizeDelta: {x: 156.7168, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279941166
 MonoBehaviour:
@@ -40863,7 +40863,7 @@ GameObject:
   - component: {fileID: 1526466287}
   - component: {fileID: 1526466286}
   m_Layer: 5
-  m_Name: Confirmation
+  m_Name: (P)Confirmation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52453,13 +52453,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2045921493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f054f231af6b334697d12765a264633, type: 3}
+  m_Script: {fileID: 11500000, guid: 3704afcc25b7e4f4caf4f42ba6fc9b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 2045921495}
   a: {fileID: 1283065159}
-  b: {fileID: 1499847052}
-  c: {fileID: 1299017216}
 --- !u!114 &2045921499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54475,18 +54473,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2115774079}
         m_TargetAssemblyTypeName: Test, Assembly-CSharp
         m_MethodName: FrontPage
@@ -54552,8 +54538,7 @@ MonoBehaviour:
   a: {fileID: 517686285}
   d: {fileID: 1795189645}
   e: {fileID: 1295677967}
-  cmdInput: {fileID: 0}
-  SearchBox: {fileID: 0}
+  cmdInput: {fileID: 1648428126}
   b: {fileID: 21300000, guid: 43402c5afab33ea4ba2eefc4060d9d77, type: 3}
   c: {fileID: 21300000, guid: a03d045a251e12b4ea8b76347bda2ad1, type: 3}
 --- !u!114 &2115774079

@@ -19,6 +19,7 @@ public class CheckEp3 : MonoBehaviour
         Debug.Log(done);
         if (done)
         {
+            this.gameObject.GetComponent<Test>().FrontPage();
             Loading.SetActive(true);
             StartCoroutine(Asd());
         } else StartCoroutine(Asd2());
@@ -39,8 +40,10 @@ public class CheckEp3 : MonoBehaviour
 
     private IEnumerator Asd2()
     {
+        this.gameObject.GetComponent<Test>().FrontPage();
         Loading.SetActive(true);
         yield return new WaitForSeconds(3);
+        this.gameObject.GetComponent<Test2>().Frontier();
         FailScreen.SetActive(true);
     }
 }
