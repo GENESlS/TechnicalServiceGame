@@ -20,6 +20,7 @@ public class changeBackground : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            this.gameObject.GetComponent<Test2>().FrontPage();
             d.SetActive(true);
             GameObject.Find("cmdInput").GetComponent<TMP_InputField>().ActivateInputField();
             GameObject.Find("SearchBox").SetActive(false);

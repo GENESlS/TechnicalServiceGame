@@ -23,6 +23,7 @@ public class ClickExR : MonoBehaviour
 		{
 			a.SetActive(true);
 			b.SetActive(false);
+			this.gameObject.GetComponent<Test>().FrontPage();
 		}
 	}
 }

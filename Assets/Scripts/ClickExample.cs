@@ -22,6 +22,7 @@ public class ClickExample : MonoBehaviour
 		else
         {
 			a.SetActive(true);
+			this.gameObject.GetComponent<Test>().FrontPage();
 			//b.SetActive(false);
         }
 		//b.SetActive(false);
