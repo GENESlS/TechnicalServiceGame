@@ -23,29 +23,34 @@ public class CheatCodes : MonoBehaviour
                 SceneManager.LoadScene("Episode 2");
                 NoTimer = false;
                 a.Play("Click");
+                tMP_InputField.text = "";
                 //Debug.Log(CodeText);
                 break;
             case "359753":
                 SceneManager.LoadScene("Episode 3");
                 NoTimer = false;
                 a.Play("Click");
+                tMP_InputField.text = "";
                 //Debug.Log(CodeText);
                 break;
             case "459753":
                 SceneManager.LoadScene("Episode 4");
                 NoTimer = false;
                 a.Play("Click");
+                tMP_InputField.text = "";
                 //Debug.Log(CodeText);
                 break;
             case "559753":
                 SceneManager.LoadScene("Episode 5");
                 NoTimer = false;
                 a.Play("Click");
+                tMP_InputField.text = "";
                 //Debug.Log(CodeText);
                 break;
             case "KillTime":
                 NoTimeButton.SetActive(true);
                 a.Play("Click");
+                tMP_InputField.text = "";
                 //Debug.Log(CodeText);
                 break;
         } 
