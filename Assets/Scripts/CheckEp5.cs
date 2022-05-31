@@ -107,6 +107,7 @@ root\.mainloop\(\)";
         if (flag1 && flag2 && flag3 && flag4 && flag5 && flag6 && flag7)
         {
             Debug.Log("Success");
+            //this.gameObject.GetComponent<Test>().FrontPage();
             Loading.SetActive(true);
             StartCoroutine(Success());
         } else {
@@ -117,6 +118,7 @@ root\.mainloop\(\)";
     private IEnumerator Success()
     {
         GameManager.SetActive(false);
+        this.gameObject.GetComponent<Test3>().FrontLine();
         appWindow.SetActive(true);
         yield return new WaitForSeconds(3);
         UIInfo.SetActive(false);
@@ -128,8 +130,10 @@ root\.mainloop\(\)";
 
     private IEnumerator Fail()
     {
+        this.gameObject.GetComponent<Test>().FrontPage();
         Loading.SetActive(true);
         yield return new WaitForSeconds(3);
+        this.gameObject.GetComponent<Test2>().Frontier();
         FailScreen.SetActive(true);
     }
 }

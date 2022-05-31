@@ -14,10 +14,11 @@ public class Disconnect : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
-            this.gameObject.SetActive(false);
             a.SetActive(false);
             b.SetActive(true);
             c.SetActive(true);
+            this.gameObject.GetComponent<Test>().FrontPage();
+            this.gameObject.SetActive(false);
             //timeLeft = 5f;
             // this.enabled = false;
         }

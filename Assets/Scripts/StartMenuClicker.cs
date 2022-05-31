@@ -23,6 +23,7 @@ public class StartMenuClicker : MonoBehaviour
 		}
 		else
         {
+			gameObject.GetComponent<Test>().FrontPage();
 			a.SetActive(true);
 			b.SetActive(false);
             c.SetActive(false);
